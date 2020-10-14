@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        /* CSS */ 
+        .pageTitle-tag{ 
+            position: fixed; 
+            width: 100%; 
+            left: 0; 
+            top: 0; 
+            color: #fff; 
+            background: #111; 
+        }
+        .pageTitle { 
+            text-align: center; 
+        } 
+        .clickmenu{
+            text-align: right;
+            font-size: 40px;
+            padding-right: 15px;
+        }
+        article {
+            padding: 52px 3% 0;
+        }
+
+        article .block {
+            padding: 20px;
+            min-height: 500px;
+        }
+
+        article .block p {
+            line-height: 22px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        article .block:nth-child(2n+1) {
+            background: #999;
+        }
+
+        article .block:nth-child(2n) {
+            background: #222;
+        }
+
+
+
+    <!--클릭 메뉴-->
+        label {
+            cursor: pointer;
+        }
+
+        #menu-toggle {
+            display: none;
+            /* hide the checkbox */
+        }
+
+        #menu {
+            display: none;
+        }
+
+        #menu-toggle:checked+#menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML -->
+    <header>
+        <div class="pageTitle-tag">
+            <h1 class="pageTitle">Infinity scroll</h1>
+            <!-- 클릭 메뉴 -->
+            <div class="clickmenu">
+                <label for="menu-toggle">&#8801;</label>
+                <input type="checkbox" id="menu-toggle"/>
+                <ul id="menu">
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
+                    <li><a href="#">Third link</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="block">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia accusamus sequi ipsa, rerum
+                nam laboriosam, ipsam aperiam deleniti beatae expedita id quisquam veritatis corporis, voluptates
+                ducimus molestiae eum adipisci.
+            </p>
+        </div>
+        <div class="block">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia accusamus sequi ipsa, rerum
+                nam laboriosam, ipsam aperiam deleniti beatae expedita id quisquam veritatis corporis, voluptates
+                ducimus molestiae eum adipisci.
+            </p>
+        </div>
+        <div class="block">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia accusamus sequi ipsa, rerum
+                nam laboriosam, ipsam aperiam deleniti beatae expedita id quisquam veritatis corporis, voluptates
+                ducimus molestiae eum adipisci.
+            </p>
+        </div>
+        <!-- 반복 -->
+    </article>
+    <script>
+        console.log("start");
+        //Javascript
+        var count = 0;
+        //스크롤 바닥 감지
+        window.onscroll = function (e) {
+            console.log("function is start");
+            //추가되는 임시 콘텐츠
+            //window height + window scrollY 값이 document height보다 클 경우,
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                //실행할 로직 (콘텐츠 추가)
+                count++;
+                var addContent = '<div class="block"><p>' + count + '번째로 추가된 콘텐츠</p></div>';
+                //article에 추가되는 콘텐츠를 append
+                $('article').append(addContent);
+            }
+            console.log("function is end");
+        };
+    </script>
+</body>
+
+</html>
+
+<!-- 무한스크롤 링크 : https://code-study.tistory.com/22 -->
+<!-- 호버 메뉴 링크 :   -->
+<!-- 따라다니는 거 링크 :   -->
