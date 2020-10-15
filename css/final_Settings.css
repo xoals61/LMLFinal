@@ -178,7 +178,6 @@ input, textarea:focus {outline:none;}
     margin-top: 20px;
     border: none;
     border-radius: 0.4em;
-    outline: none;
     cursor: pointer;
 }
 
@@ -186,6 +185,13 @@ input, textarea:focus {outline:none;}
   color: rgb(255, 255, 255);
   font-weight: 700;
   background-color: rgb(50, 158, 230);
+  outline: none;
+  transition: 0.3s;
+}
+
+#Sbtn:hover{
+    background-color: rgb(92, 190, 255);
+    color: rgb(255, 255, 255);
 }
 
 #Delbtn{
@@ -193,4 +199,10 @@ input, textarea:focus {outline:none;}
     font-weight: 700;
     margin-right: 500px;
     background:none;
+    outline: none;
+    transition: 0.5s;
+}
+
+#Delbtn:hover{
+    background-color: rgb(231, 227, 227);
 }
