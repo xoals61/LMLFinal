@@ -51,9 +51,9 @@ li:hover{
 .Ma{
     text-decoration: none !important;
     color: rgb(124, 123, 123);
-    margin-left: 50px;
+    margin-left: 40px;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 25px;
     font-size: 20px;
     font-weight: 350;
 
@@ -64,10 +64,20 @@ li:hover{
     color: black;
 }
 
-.Ma:visited{
+/* .Ma:visited{
     text-decoration: none !important; 
     color:rgb(124, 123, 123);
+} */
+
+.mainbtn{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
 }
+/* .Ma:visited{
+    text-decoration: none !important; 
+    color:rgb(124, 123, 123);
+} */
 
 .lmenu{
     height: 500px;
