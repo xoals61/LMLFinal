@@ -58,118 +58,149 @@
                 <div class="Abox">
                    <div class="lContent">
                        <div class="lmenu">
-                         <li><a href="#" class="Ma"> 프로필 수정</a></li>
-                         <li><a href="#" class="Ma"> 비밀번호 변경</a></li>
-                         <li><a href="#" class="Ma"> 이메일 문의</a></li>
+                         <li><a href="/lml_Settings.html" class="Ma"> 프로필 수정</a></li>
+                         <li><a href="/lml_Settings_2.html" class="Ma"> 비밀번호 변경</a></li>
+                         <li><a href="/lml_Settings_3.html" class="Ma"> 이메일 문의</a></li>
                      </div>
                 </div>
-                   <div class="rContent">
-                        <from class="MyInfo">
-                            <div class="profile">
-                                <div class="photo"></div>
-                                <div class="ChangeBtn">
-                                    <input type="file" id="file" name="file" onchange="changeValue(this)"/>
-                                     <button type="button" id="btn-upload">프로필 사진 바꾸기</button></div>
+                <div class="rContent">
+                    <from class="MyInfo">
+                        <div class="profile">
+                            <div class="photo"  id="image_container">
+                                <img id="Myimg" />
                             </div>
-                            <div class="ModifyInfo">
-                                <label class=Info>닉네임 &nbsp;&nbsp;&nbsp;
-                                     <input class="infoinput" name="id" type="text" placeholder="닉네임"></label><br>
-                                <label class=Info>이메일 &nbsp;&nbsp;&nbsp; 
-                                    <input class="infoinput" name="email" type="email" placeholder="이메일"></label><br>
-                                <label class=Info>전화번호  
-                                    <input class="infoinput" name="phone" type="text" placeholder="전화번호"></label><br>
-                                <label class=Info>성  별 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                                    <input class="gender" type="radio" name="gender" value="woman" checked>여
-                                    <input class="gender" type="radio" name="gender" value="man">남
-                                </label><br>
-                                <label class=Info>몸무게 &nbsp;&nbsp;&nbsp;
-                                     <input class="infoinput" name="weight" type="text" placeholder="몸무게" maxlength="3" numberOnly></label><br>
-                                <label class=Info>키 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                                    <input class="infoinput" name="height" type="text" maxlength="3" placeholder="키" numberOnly></label><br>
-                                <label class=Info2 id="infomy">자기소개</label> &nbsp; 
-                                <textarea id="inrtoduce" name="inrtoduce" type="text" placeholder="자기소개"></textarea><br>
-                            </div>
-                            <div class="Fbtn">
-                                <button class="btns2"id="Delbtn" type="button">탈퇴</button>
-                                <button class="btns2"id="Sbtn" type="button">변경하기</button>
-                            </div>
-                        </from>
-                   </div>
+                            <div class="ChangeBtn">
+                                 <input type="file" id="file" name="file" onchange="changeValue(this)"  accept="image/*" />
+                                 <button type="button" id="btn-upload">프로필 사진 바꾸기</button></div>
+                        </div>
+
+                        <div class="ModifyInfo">
+                            <label class=Info>닉네임 &nbsp;&nbsp;&nbsp;
+                                 <input class="infoinput" name="id" type="text" placeholder="닉네임"></label><br>
+                            <label class=Info>이메일 &nbsp;&nbsp;&nbsp; 
+                                <input class="infoinput" name="email" type="email" placeholder="이메일"></label><br>
+                            <label class=Info>전화번호  
+                                <input class="infoinput" name="phone" type="text" placeholder="전화번호"></label><br>
+                            <label class=Info>성  별 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                <input class="gender" type="radio" name="gender" value="woman" checked>여
+                                <input class="gender" type="radio" name="gender" value="man">남
+                            </label><br>
+                            <label class=Info>몸무게 &nbsp;&nbsp;&nbsp;
+                                 <input class="infoinput" name="weight" type="text" placeholder="몸무게" maxlength="3" numberOnly></label><br>
+                            <label class=Info>키 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                <input class="infoinput" name="height" type="text" maxlength="3" placeholder="키" numberOnly></label><br>
+                            <label class=Info2 id="infomy">자기소개</label> &nbsp; 
+                            <textarea id="inrtoduce" name="inrtoduce" type="text" placeholder="자기소개"></textarea><br>
+                        </div>
+                        <div class="Fbtn">
+                            <button class="btns2"id="Delbtn" type="button">탈퇴</button>
+                            <button class="btns2"id="Sbtn" type="button">변경하기</button>
+                        </div>
+                    </from>
+               </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        /*이미지 프리뷰 보기*/
+        var sel_file;
 
-    <script type="text/javascript">
-        /*iput태그 파일*/
-        $(function () {    
-        $('#btn-upload').click(function (e) {
-        e.preventDefault();   
-        $('#file').click();
+        $(document).ready(function(){
+            $("#file").on("change",handleImgFileSelect);
+        });
+
+        function handleImgFileSelect(e){
+            var files = e.target.files;
+            var filesArr = Array.prototype.slice.call(files);
+
+            filesArr.forEach(function(f){
+                if(!f.type.Math("image.*")){
+                    alert("이미지 파일만 가능합니다.");
+                    return;
+                }
+
+                sel_file = f;
+
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    $("#img").attr("src",e.target.result);
+                }
+                reader.readAsDataURL(f);
+            });
+        }
+    </script>
+
+<script type="text/javascript">
+    /*iput태그 파일*/
+    $(function () {    
+    $('#btn-upload').click(function (e) {
+    e.preventDefault();   
+    $('#file').click();
+    });
+    
+    });
+      function changeValue(obj){
+          alert(obj.value);
+      }        
+    </script>
+
+      <script>
+          /* 상단 메뉴 스크롤 */
+          $(function () {
+            var lastScrollTop = 0,
+                delta = 15;
+            $(window).scroll(function (event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".hMenu").css("top", "0px");
+                } else {
+                    $(".hMenu").css("top", "50px");
+                }
+                lastScrollTop = st;
+            });
+        });
+
+        $(document).ready(function(){
+            $('.hMenu2').on('click', function(){
+                $(this).addClass('on');
+                $(this).siblings().removeClass('on');
+            });
+        });
+      </script>
+
+      <script>
+        /* 마이페이지 햄버거메뉴 */
+        $(document).ready(function(){
+            $(".mySub").hide();
+            $(".myMenu").click(function(){
+                $("ul",this).slideToggle("fast");
+            });
+        });
+
+        $("body").click(function(e){
+            if(!$(".myMenu").has(e.target).length){
+                $(".mySub").hide();
+            }
+        });
+
+
+        /* 알림 아이콘 클릭 시 아이콘 변경 */
+        $(".heart").click(function(){
+            $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-favorite-3-72.png');
+        });
+
+        // 다른곳 클릭하면 하트 원래대로
+        $("body").click(function(e){
+            if(!$(".heart").has(e.target).length){
+                $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-heart-thin-72.png');
+            }
         });
         
-        });
-          function changeValue(obj){
-              alert(obj.value);
-          }        
-        </script>
+      </script>
 
-<script>
-    /* 상단 메뉴 스크롤 */
-    $(function () {
-      var lastScrollTop = 0,
-          delta = 15;
-      $(window).scroll(function (event) {
-          var st = $(this).scrollTop();
-          if (Math.abs(lastScrollTop - st) <= delta) return;
-          if ((st > lastScrollTop) && (lastScrollTop > 0)) {
-              $(".hMenu").css("top", "0px");
-          } else {
-              $(".hMenu").css("top", "50px");
-          }
-          lastScrollTop = st;
-      });
-  });
-
-  $(document).ready(function(){
-      $('.hMenu2').on('click', function(){
-          $(this).addClass('on');
-          $(this).siblings().removeClass('on');
-      });
-  });
-</script>
-
-<script>
-  /* 마이페이지 햄버거메뉴 */
-  $(document).ready(function(){
-      $(".mySub").hide();
-      $(".myMenu").click(function(){
-          $("ul",this).slideToggle("fast");
-      });
-  });
-
-  $("body").click(function(e){
-      if(!$(".myMenu").has(e.target).length){
-          $(".mySub").hide();
-      }
-  });
-
-
-  /* 알림 아이콘 클릭 시 아이콘 변경 */
-  $(".heart").click(function(){
-      $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-favorite-3-72.png');
-  });
-
-  // 다른곳 클릭하면 하트 원래대로
-  $("body").click(function(e){
-      if(!$(".heart").has(e.target).length){
-          $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-heart-thin-72.png');
-      }
-  });
-  
-</script>
-  
       
 </body>
 </html>

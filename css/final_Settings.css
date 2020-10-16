@@ -50,11 +50,12 @@ li:hover{
 
 .Ma{
     text-decoration: none !important;
-    color: black;
+    color: rgb(124, 123, 123);
     margin-left: 50px;
     display: inline-block;
     margin-top: 30px;
     font-size: 20px;
+    font-weight: 350;
 
 }
 
@@ -65,7 +66,7 @@ li:hover{
 
 .Ma:visited{
     text-decoration: none !important; 
-    color: black;
+    color:rgb(124, 123, 123);
 }
 
 .lmenu{
@@ -113,6 +114,11 @@ li:hover{
 
 #file { display:none; }
 
+#Myimg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 /*------------------정보 수정------------------*/
 .ModifyInfo{
     margin-top: 50px;

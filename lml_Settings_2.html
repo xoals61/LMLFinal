@@ -58,13 +58,31 @@
                 <div class="Abox">
                    <div class="lContent">
                        <div class="lmenu">
-                         <li><a href="#" class="Ma"> 프로필 수정</a></li>
-                         <li><a href="#" class="Ma"> 비밀번호 변경</a></li>
-                         <li><a href="#" class="Ma"> 이메일 문의</a></li>
+                        <li><a href="/lml_Settings.html" class="Ma"> 프로필 수정</a></li>
+                        <li><a href="/lml_Settings_2.html" class="Ma"> 비밀번호 변경</a></li>
+                        <li><a href="/lml_Settings_3.html" class="Ma"> 이메일 문의</a></li>
                      </div>
                 </div>
                    <div class="rContent">
+                    <form method="POST" action="" class="ChangePwd">
+                        <div class="login_input_container">
+                            <div class="Origin Pwd">현재 비밀번호
+                                <input class="login_input" name="origin_password" type="password" maxlength="13">
+                            </div>
+                            
+                            <div class="New Pwd">새로운 비밀번호
+                                <input class="login_input" name="password1" type="password" maxlength="13">
+                            </div>
 
+                            <div class="Confirm Pwd">비밀번호 확인
+                                <input class="login_input" name="password2" type="password" maxlength="13">
+                            </div>
+                        </div>
+                        <div class="login_btn_container">
+                            <input type="submit" class="login_btn" value="변경하기">
+                        </div>
+                </div>
+                </form>
                    </div>
                 </div>
             </div>
