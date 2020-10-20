@@ -42,16 +42,15 @@
 li{
     list-style: none;
     height: 80px;
-    transition:0.2s all;
 }
 
-/* li.on{
+li.put{
     background-color: rgba(27, 21, 21, 0.034);
-} */
+    border-left: 2px solid rgb(92, 160, 223);
+}
 
 li:hover{
     background-color: rgba(27, 21, 21, 0.034);
-    border-left: 2px solid rgb(92, 160, 223);
 }
 
 .Ma{
@@ -69,20 +68,12 @@ li:hover{
     color: black;
 }
 
-/* .Ma:visited{
-    text-decoration: none !important; 
-    color:rgb(124, 123, 123);
-} */
 
 .mainbtn{
     width: 30px;
     height: 30px;
     margin-right: 15px;
 }
-/* .Ma:visited{
-    text-decoration: none !important; 
-    color:rgb(124, 123, 123);
-} */
 
 .lmenu{
     height: 500px;
@@ -129,7 +120,7 @@ li:hover{
 
 #file { display:none; }
 
-img{
+#Myimg{
     width: 100%;
     height: 100%;
     border-radius: 50%;

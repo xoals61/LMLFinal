@@ -58,16 +58,16 @@
                 <div class="Abox">
                    <div class="lContent">
                     <div class="lmenu">
-                        <li><a href="./lml_Settings.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mprofile.png">프로필 수정</a></li>
-                        <li><a href="./lml_Settings_2.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mrock.png">비밀번호 변경</a></li>
-                        <li><a href="./lml_Settings_3.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Memail.png">이메일 문의</a></li>
+                        <li class="minimenu put"><a href="./lml_Settings.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mprofile.png">프로필 수정</a></li>
+                        <li class="minimenu"><a href="./lml_Settings_2.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mrock.png">비밀번호 변경</a></li>
+                        <li class="minimenu"><a href="./lml_Settings_3.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Memail.png">이메일 문의</a></li>
                      </div>
                 </div>
                
                 <div class="rContent">
                     <from class="MyInfo">
                         <div class="profile">
-                            <div class="photo"  >
+                            <div class="photo">
                                 <img src="./images/icon/settings/Myimg.PNG" id="Myimg">
                             </div>
                             <div class="ChangeBtn">
@@ -104,6 +104,14 @@
         </div>
     </section>
 
+    <script>
+          $(document).ready(function(){
+            $('.minimenu').on('click', function(){
+                $(this).addClass('put');
+                $(this).siblings().removeClass('put');
+            });
+        });
+    </script>
 
   <script>
     function changeValue(value) {

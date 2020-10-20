@@ -40,9 +40,14 @@ li{
     transition:0.2s all;
 }
 
-li:hover{
-    background-color: rgba(27, 21, 21, 0.027);
+
+li.put{
+    background-color: rgba(27, 21, 21, 0.034);
     border-left: 2px solid rgb(92, 160, 223);
+}
+
+li:hover{
+    background-color: rgba(27, 21, 21, 0.034);
 }
 
 .Ma{
