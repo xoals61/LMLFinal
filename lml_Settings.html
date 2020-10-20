@@ -67,8 +67,8 @@
                 <div class="rContent">
                     <from class="MyInfo">
                         <div class="profile">
-                            <div class="photo"  id="image_container">
-                                <img id="Myimg" />
+                            <div class="photo"  >
+                                <img src="./images/icon/settings/Myimg.PNG" id="Myimg">
                             </div>
                             <div class="ChangeBtn">
                                  <input type="file" id="file" name="file" onchange="changeValue(this)"  accept="image/*" />
@@ -104,34 +104,34 @@
         </div>
     </section>
 
-    <script>
-        /*이미지 프리뷰 보기*/
-        var sel_file;
 
-        $(document).ready(function(){
-            $("#file").on("change",handleImgFileSelect);
-        });
+  <script>
+    function changeValue(value) {
 
-        function handleImgFileSelect(e){
-            var files = e.target.files;
-            var filesArr = Array.prototype.slice.call(files);
+        console.log("실행되니");
 
-            filesArr.forEach(function(f){
-                if(!f.type.Math("image.*")){
-                    alert("이미지 파일만 가능합니다.");
-                    return;
-                }
-
-                sel_file = f;
-
-                var reader = new FileReader();
-                reader.onload = function(e){
-                    $("#img").attr("src",e.target.result);
-                }
-                reader.readAsDataURL(f);
-            });
+        // src를 변경할 img태그
+       var preview = document.querySelector('#Myimg');
+        
+        // 자바스크립트에서 0, -0, null, false, NaN, undefined, ''의 값을 가지면 false이고, 나머지는 true이다.
+        // 객체 or 변수를 넣게 되면 true가 나오므로 실행이 되는 것이다..!!
+        if(value.files && value.files[0]) {
+           
+           // FileReader란?
+   // 웹 애플리케이션이 비동기적으로 데이터를 읽기 위하여 읽을 파일을 가리키는 File혹은 Blob객체를 이용해 
+   // 파일의 내용을(혹은 raw data버퍼로) 읽고 사용자의 컴퓨터에 저장하는 것을 가능하게 한다.
+             var reader = new FileReader();
+           
+             reader.onload = function (e) {
+                console.log(e); // ProgressEvent객체
+                console.log(e.target); // FileReader객체
+                console.log(e.target.result); // 파일을 String값으로 저장한다.
+                 $('#Myimg').attr('src', e.target.result); // src를 불러온 String값으로 치환한다.
+             }
+             reader.readAsDataURL(value.files[0]); // DataURL 형식으로 파일을 읽어준다.
         }
-    </script>
+    }
+</script>
 
 <script type="text/javascript">
     /*iput태그 파일*/
@@ -142,9 +142,7 @@
     });
     
     });
-      function changeValue(obj){
-          alert(obj.value);
-      }        
+       
     </script>
 
       <script>
@@ -201,6 +199,15 @@
         });
         
       </script>
+
+<script>
+    $(function(){
+        $('li').click(function(){
+            $('li').removeClass()
+                $(this).addClass('on')
+        });
+    });
+</script>
 
       
 </body>

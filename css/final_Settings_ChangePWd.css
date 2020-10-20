@@ -1,6 +1,6 @@
 .Abox{
     width: 1200px;
-    height: 600px;
+    height: 700px;
     border:1px solid rgb(216, 213, 213);
     margin-right: 100px;
     border-radius: 0.4em;
@@ -37,10 +37,12 @@
 li{
     list-style: none;
     height: 80px;
+    transition:0.2s all;
 }
 
 li:hover{
     background-color: rgba(27, 21, 21, 0.027);
+    border-left: 2px solid rgb(92, 160, 223);
 }
 .Ma{
     text-decoration: none !important;
