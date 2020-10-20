@@ -1,8 +1,11 @@
+/* .sContent{
+    position: absolute;
+} */
 .board-detail{
     width: 955px;
     height: 600px;
     background-color: white;
-    position: sticky;
+    position: fixed;
     left: 450px;
     top: 150px;
     border:  1px solid #1a4664;

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/final_main.css">
-    <link rel="stylesheet" href="./css/final_Settings_ChangePWd.css">
+    <link rel="stylesheet" href="./css/board-detail.css">
 </head>
 <body>
     <header>
@@ -47,46 +47,64 @@
                 <div class="hMenu2"><span>QnA</span></div>
                 <span></span>
             </div>
-            
         </div>
     </header>
     <section>
-        <div class="AContent">
-            <div class="Atable">
-                <div class="Abox">
-                   <div class="lContent">
-                    <div class="lmenu">
-                        <li><a href="./lml_Settings.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mprofile.png">프로필 수정</a></li>
-                        <li><a href="./lml_Settings_2.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mrock.png">비밀번호 변경</a></li>
-                        <li><a href="./lml_Settings_3.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Memail.png">이메일 문의</a></li>
-                     </div>
+        <div class="board-detail">
+            <img src="./images/theman.jpg">
+            <div class="right">
+                <div class="board-title">
+                    <img src="./images/40x40man.jpg">
+                    <div class="board-id">__maybenotyet__ </div>
+                    <div class="board-name">모성민</div>
                 </div>
-                   <div class="rContent">
-                    <form method="POST" action="" class="ChangePwd">
-                        <div class="login_input_container">
-                            <div class="Origin Pwd">현재 비밀번호
-                                <input class="login_input" name="origin_password" type="password" maxlength="13">
-                            </div>
-                            
-                            <div class="New Pwd">새로운 비밀번호
-                                <input class="login_input" name="password1" type="password" maxlength="13">
-                            </div>
-
-                            <div class="Confirm Pwd">비밀번호 확인
-                                <input class="login_input" name="password2" type="password" maxlength="13">
-                            </div>
-                        </div>
-                        <div class="login_btn_container">
-                            <input type="submit" class="login_btn" value="변경하기">
-                        </div>
+                <div class="board-text">글 내용
+                    
                 </div>
-                </form>
-                   </div>
-                </div>
+                <div class="board-comment">댓글</div>
+                <div class="board-comment1">댓글1</div>
+                <div class="board-comment2">댓글2</div>
+            </div>
+        </div>
+        <div class="sContent">
+            <div class="ctable">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                            <td><div class="content"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
-
 
       <script>
           /* 상단 메뉴 스크롤 */
@@ -141,6 +159,26 @@
             }
         });
         
+        ///////////////////////////////////////////////////////////무한 스크롤///////////////////////////////////////////////////////
+        console.log("start");
+        //Javascript
+        var count = 0;
+        //스크롤 바닥 감지
+        window.onscroll = function (e) {
+            console.log("function is start");
+            //추가되는 임시 콘텐츠
+            //window height + window scrollY 값이 document height보다 클 경우,
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                //실행할 로직 (콘텐츠 추가)
+                count++;
+                var addContent = '<tr><td><div class="content"></div></td><td><div class="content"></div></td><td><div class="content"></div></td></tr>';
+                //article에 추가되는 콘텐츠를 append
+                $('.ctable').children().children().append(addContent);
+                console.log("function is end");
+                console.log($('.ctable').children().children());
+            }
+        };
+        ///////////////////////////////////////////////////////////무한 스크롤 끝 ///////////////////////////////////////////////////////
       </script>
 
       
