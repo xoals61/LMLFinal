@@ -2,19 +2,18 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>lml_Email</title>
+    <title>메인</title>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/final_main.css">
-    <link rel="stylesheet" href="./css/final_Settings_Email.css">
 </head>
 <body>
     <header>
         <div class="hTitle">
             <div class="nav1">
-                <div class="hTitle1"><a href="./lml_main.html"><img src="./images/logo/logo_medium.png" class="titleImg"/></a></div>
+                <div class="hTitle1"><img src="./images/logo/logo_medium.png" class="titleImg"/></div>
                 <div class="hTitle1">
                     <form action="#" autocomplete="off">
                         <fieldset class="sUrl">
@@ -29,7 +28,7 @@
                             <img src="./images/icon/menu/iconmonstr-menu-thin-72.png"><!-- 이미지 클릭 시 서브메뉴 나옴 -->
                             <ul class="mySub">
                                 <li><div class="mySub1">마이페이지</div></li>
-                                <a href="./lml_Settings.html"><li><div class="mySub1">설정</div></li></a>
+                                <li><div class="mySub1">설정</div></li>
                                 <li><div class="mySub1">로그아웃</div></li>
                             </ul>
                         </div><!--메뉴-->
@@ -53,41 +52,44 @@
         </div>
     </header>
     <section>
-        <div class="AContent">
-            <div class="Atable">
-                <div class="Abox">
-                   <div class="lContent">
-                    <div class="lmenu">
-                        <li class="minimenu"><a href="./lml_Settings.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mprofile.png">프로필 수정</a></li>
-                        <li class="minimenu"><a href="./lml_Settings_2.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mrock.png">비밀번호 변경</a></li>
-                        <li class="minimenu put"><a href="./lml_Settings_3.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Memail.png">이메일 문의</a></li>
-                     </div>
-                </div>
-                <div class="rContent">
-                    <div class="emailform">
-                        문의사항 혹은 저희 홈페이지에 대한<br>
-                        피드백이 있으시다면<br>
-                        하단의 메일 버튼을 누르시거나<br>
-                        <a href="mailto:feedback@lml.com">feedback@lml.com</a> 으로 메일을 보내주세요!
-                    </div>
-                    <div class="Ebtn">
-                        <a href="mailto:feedback@lml.com"><img id="emailbtn" src="./images/icon/settings/email2.png"></a>
-                    </div>
-               </div>
-                </div>
+        <div class="sContent">
+            <div class="ctable">
+                <table>
+                    <tr>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                        <td><div class="content"></div></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
 
-    <script>
-        /*선택 메뉴 고정*/
-        $(document).ready(function(){
-          $('.minimenu').on('click', function(){
-              $(this).addClass('put');
-              $(this).siblings().removeClass('put');
-          });
-      });
-  </script>
 
       <script>
           /* 상단 메뉴 스크롤 */
@@ -142,6 +144,26 @@
             }
         });
         
+        ///////////////////////////////////////////////////////////무한 스크롤///////////////////////////////////////////////////////
+        console.log("start");
+        //Javascript
+        var count = 0;
+        //스크롤 바닥 감지
+        window.onscroll = function (e) {
+            console.log("function is start");
+            //추가되는 임시 콘텐츠
+            //window height + window scrollY 값이 document height보다 클 경우,
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                //실행할 로직 (콘텐츠 추가)
+                count++;
+                var addContent = '<tr><td><div class="content"></div></td><td><div class="content"></div></td><td><div class="content"></div></td></tr>';
+                //article에 추가되는 콘텐츠를 append
+                $('.ctable').children().children().append(addContent);
+                console.log("function is end");
+                console.log($('.ctable').children().children());
+            }
+        };
+         ///////////////////////////////////////////////////////////무한 스크롤 끝 ///////////////////////////////////////////////////////
       </script>
 
       

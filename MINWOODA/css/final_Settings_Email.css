@@ -1,6 +1,6 @@
 .Abox{
     width: 1200px;
-    height: 700px;
+    height: 600px;
     border:1px solid rgb(216, 213, 213);
     margin-right: 100px;
     border-radius: 0.4em;
@@ -37,17 +37,10 @@
 li{
     list-style: none;
     height: 80px;
-    transition:0.2s all;
-}
-
-
-li.put{
-    background-color: rgba(27, 21, 21, 0.034);
-    border-left: 2px solid rgb(92, 160, 223);
 }
 
 li:hover{
-    background-color: rgba(27, 21, 21, 0.034);
+    background-color: rgba(27, 21, 21, 0.027);
 }
 
 .Ma{
@@ -99,12 +92,5 @@ li:hover{
     width: 60px;
     height: 60px;
     margin-top: 30px;
-    transition: 0.5s;
-}
-
-#emailbtn:hover{
-    width: 80px;
-    height: 80px;
-
 }
 

@@ -1,6 +1,6 @@
 .Abox{
     width: 1200px;
-    height: 700px;
+    height: 600px;
     border:1px solid rgb(216, 213, 213);
     margin-right: 100px;
     border-radius: 0.4em;
@@ -37,19 +37,11 @@
 li{
     list-style: none;
     height: 80px;
-    transition:0.2s all;
-}
-
-
-li.put{
-    background-color: rgba(27, 21, 21, 0.034);
-    border-left: 2px solid rgb(92, 160, 223);
 }
 
 li:hover{
-    background-color: rgba(27, 21, 21, 0.034);
+    background-color: rgba(27, 21, 21, 0.027);
 }
-
 .Ma{
     text-decoration: none !important;
     color: rgb(124, 123, 123);
@@ -76,35 +68,69 @@ li:hover{
     height: 30px;
     margin-right: 15px;
 }
+/* .Ma:visited{
+    text-decoration: none !important; 
+    color:rgb(124, 123, 123);
+} */
 
 .lmenu{
     height: 500px;
     width: 300px;
 }
 
-.emailform{
+.login_input_container{
     width: 100%;
-    text-align: center;
-    font-size: 30px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.login_input{
+    width: 350px;
+    height: 39px;
+    margin-left: 30px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 0.15em;
+}
+
+.Pwd{
+    width:100%;
     font-weight: 400;
-    margin-top: 200px;
+    color: rgb(107, 105, 105); 
+    font-size: 23px;
 }
 
-.Ebtn{
+.Origin{
+    margin: 100px 20px 40px 198px;
+}
+
+.New{
+    margin: 30px 20px 0 175px;
+}
+
+.Confirm{
+    margin: -1px 20px 40px 196px;
+}
+
+.login_btn_container{
     width: 100%;
-    text-align: center;
+    text-align: right;
 }
 
-#emailbtn{
-    width: 60px;
-    height: 60px;
-    margin-top: 30px;
-    transition: 0.5s;
+.login_btn{
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    margin: 30px 50px 0 0 ;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background-color: rgb(50, 158, 230);
+    outline: none;
+    transition: 0.3s;
 }
 
-#emailbtn:hover{
-    width: 80px;
-    height: 80px;
-
+.login_btn:hover{
+    background-color: rgb(92, 190, 255);
+    color: rgb(255, 255, 255);
 }
-

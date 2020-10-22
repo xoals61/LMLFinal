@@ -1,0 +1,151 @@
+        *{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 본문 */
+        .scContent {
+            background-color: rgb(248, 248, 248);
+        }
+
+        .ctable{
+            width: 1920px;
+            min-width: 1400px;
+            height: 100%;
+            padding: 170px 400px;
+        }
+
+        .content{
+            position: relative;
+            width: 350px;
+            height: 350px;
+            background-color: rgb(160, 160, 160);
+            margin: 12px;
+        }
+
+        .cImg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* =========== 컨텐츠 마우스오버 했을 때 =========== */
+        .chover{
+            position: absolute;
+            width: 350px;
+            height: 350px;
+        }
+
+        .chContnet{
+            position: static;
+            background: rgba(0, 0, 0, 0.404);
+            width: 350px;
+            height: 150px;
+            margin-top: 200px;
+        }
+
+        /* 유저정보 */
+        .user{
+            width: 100%;
+            height: 50px;
+        }
+
+        .userImg{
+            width: 30px;
+            height: 30px;
+            float: left;
+            border: 1px solid rgb(190, 190, 190);
+            border-radius: 50%;
+            background: gray;
+            margin: 10px;
+        }
+
+        .userId{
+            float: left;
+            color: white;
+            margin: 13px 0px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        /* 게시물 내용 */
+        .con{
+            width: 100%;
+            height: 50px;
+        }
+
+        .userCon{
+            color: white;
+            font-weight: 300;
+            font-size: 13px;
+            margin: 0px 10px;
+        }
+
+        /* 게시물 버튼 */
+        .cBtn{
+            width: 100%;
+            height: 50px;
+        }
+
+        .cHeart{
+            width: 116px;
+            height: 100%;
+            float: left;
+            background-color: tomato;
+        }
+
+        .cHeart img{
+            width: 28px;
+            height: 28px;
+            margin: 11px 44px;
+        }
+
+        .cComment{
+            width: 118px;
+            height: 100%;
+            float: left;
+            background-color: teal;
+        }
+
+        .cComment img{
+            width: 30px;
+            height: 30px;
+            margin: 10px 44px;
+        }
+
+        .cEtc{
+            width: 116px;
+            height: 100%;
+            float: left;
+            background-color: turquoise;
+        }
+
+        .cEtc img{
+            width: 28px;
+            height: 25px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
