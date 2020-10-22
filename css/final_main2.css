@@ -94,6 +94,12 @@
             background-color: tomato;
         }
 
+        .cHeart img{
+            width: 28px;
+            height: 28px;
+            margin: 11px 44px;
+        }
+
         .cComment{
             width: 118px;
             height: 100%;
@@ -101,11 +107,22 @@
             background-color: teal;
         }
 
+        .cComment img{
+            width: 30px;
+            height: 30px;
+            margin: 10px 44px;
+        }
+
         .cEtc{
             width: 116px;
             height: 100%;
             float: left;
             background-color: turquoise;
+        }
+
+        .cEtc img{
+            width: 28px;
+            height: 25px;
         }
 
 
