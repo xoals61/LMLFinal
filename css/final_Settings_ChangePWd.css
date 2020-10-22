@@ -107,7 +107,7 @@ li:hover{
 }
 
 .Confirm{
-    margin: -1px 20px 40px 196px;
+    margin: -1px 20px 10px 196px;
 }
 
 .login_btn_container{
@@ -132,4 +132,24 @@ li:hover{
 .login_btn:hover{
     background-color: rgb(92, 190, 255);
     color: rgb(255, 255, 255);
+}
+
+/* .alert-success{
+    width: 200px;
+} */
+
+/* .alert-danger{
+    width: 500px;
+    text-align: center;
+    margin-left:150px;
+}  */
+
+.Al{
+    width:350px;
+    margin-left:366px;
+    height: 36px;
+    border-radius: 0.4em;
+    color: rgb(107, 105, 105); 
+    font-size: 20px;
+    font-weight: 400;
 }
