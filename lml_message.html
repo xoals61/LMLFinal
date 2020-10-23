@@ -35,7 +35,7 @@
             border-left: 2px solid rgb(92, 160, 223);
         }
 
-        li:hover {
+        .minimenu:hover {
             background-color: rgba(27, 21, 21, 0.034);
         }
         .lmenu {
@@ -46,6 +46,13 @@
             width: 100%;
             height: 100%;
             /* margin-right: 15px; */
+        }
+        .aBox div {
+            float: left;
+        }
+        .minimenu {
+            border-bottom: rgba(0, 0, 0, 0.199) 1px solid;
+            margin-top: 10px;
         }
     </style>
     <body>
@@ -119,20 +126,31 @@
                         style=" width: 1200px;height: 700px;border:1px solid rgb(216, 213, 213);margin-right: 100px;border-radius: 0.4em;background-color: white;">
                         <div class="lContent">
                             <div class="lmenu">
+                                <li style="text-align: center; border-bottom: rgba(0, 0, 0, 0.199) 1px solid;">
+                                    
+                                        <h2>message</h2>
+                                        
+                                </li>
                                 <li class="minimenu">
-                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img class="mainbtn" src="./images/icon/settings/Mprofile.png"></div>
+                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img
+                                        class="mainbtn"
+                                        src="./images/icon/message/KakaoTalk_20201023_135213749.png"></div>
                                     <div style="width: 70%;height: 100%;box-sizing: border-box; float: right;">
                                         <h5>박아무개</h5>
                                         <span>안녕?</span></div>
                                 </li>
                                 <li class="minimenu">
-                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img class="mainbtn" src="./images/icon/settings/Mprofile.png"></div>
+                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img
+                                        class="mainbtn"
+                                        src="./images/icon/message/KakaoTalk_20201023_135213749_03.png"></div>
                                     <div style="width: 70%;height: 100%;box-sizing: border-box; float: right;">
                                         <h5>이아무개</h5>
                                         <span>오랜만?</span></div>
                                 </li>
                                 <li class="minimenu">
-                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img class="mainbtn" src="./images/icon/settings/Mprofile.png"></div>
+                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img
+                                        class="mainbtn"
+                                        src="./images/icon/message/KakaoTalk_20201023_135213749_02.png"></div>
                                     <div style="width: 70%;height: 100%;box-sizing: border-box; float: right;">
                                         <h5>유아무개</h5>
                                         <span>자니..?</span></div>
@@ -141,7 +159,35 @@
                             </div>
                         </div>
 
-                        <div class="rContent"></div>
+                        <div class="rContent">
+
+                            <div class="message" style="width: 100%;float: left;height: 80%;"></div>
+                            <div
+                                class="send"
+                                style="width: 100%;border: solid 1px rgba(0, 0, 0, 0.274);float: left; height: 20%;border-radius: 15px;">
+                                <input
+                                    type="text"
+                                    style="border: rgba(70, 131, 180, 0.37) 1px solid;
+                            width: 750px;
+                            height: 84%;
+                            float: left;
+                            border-radius: 5px;
+                            margin-top: 10px;
+                            margin-left: 10px;">
+                                <button
+                                    style="width: 116px;
+                            height: 85%;
+                            float: right;
+                            border: 0;
+                            outline: 0px;
+                            background: none;
+                            margin-top: 11px;
+                            margin-right: 3px;"><img
+                                    src="./images/icon/message/send-mail.png"
+                                    style="width: 100%; height: 100%;"></button>
+                            </div>
+
+                        </div>
 
                     </div>
 
