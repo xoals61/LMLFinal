@@ -7,6 +7,21 @@
             background-color: rgb(248, 248, 248);
         }
 
+        /* 글쓰기 버튼 */
+        .postBtn{
+            position: fixed;
+            margin: 750px 0px 0px 1600px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .postBtn img{
+            width: 70px;
+            height: 70px;
+        }
+
         .ctable{
             width: 1920px;
             min-width: 1400px;
@@ -51,8 +66,8 @@
         }
 
         .userImg{
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             float: left;
             border: 1px solid rgb(190, 190, 190);
             border-radius: 50%;
@@ -62,8 +77,8 @@
         }
 
         .userImg img{
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             margin: -1px;
         }
@@ -71,9 +86,9 @@
         .userId{
             float: left;
             color: white;
-            margin: 13px 0px;
+            margin: 19px 2px;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 19px;
         }
 
         /* 게시물 내용 */
@@ -91,7 +106,7 @@
         .userCon p{
             width: 320px;
             height: 50px;
-            font-size: 14px;
+            font-size: 17px;
             text-overflow: ellipsis;
             color: white;
             display: block;

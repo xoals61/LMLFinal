@@ -33,7 +33,7 @@
                             </ul>
                         </div><!--메뉴-->
                         <div class="heart"><img src="./images/icon/menu/iconmonstr-heart-thin-72.png" class="heart heartIcon"></div><!--알림-->
-                        <div><img src="./images/icon/menu/iconmonstr-speech-bubble-thin-72.png"></div><!--채팅-->
+                        <div><a href="./lml_message.html"><img src="./images/icon/menu/iconmonstr-speech-bubble-thin-72.png"></a></div><!--채팅-->
                     </div>
                 </div>
             </div>
@@ -53,6 +53,11 @@
     </header>
     <section>
         <div class="scContent">
+            <a href="./lml_Post.html">
+                <div class="postBtn">
+                    <img src="images/icon/main/plus.png">
+                </div>
+            </a>
             <div class="ctable">
                 <table id="table">
                     <tr>
@@ -355,6 +360,12 @@
                 $(".cHeart").click(function(){
                     $('.cheart',this).attr('src','./images/icon/main/heart2.png');
                 });
+
+                $(function(){
+                    $('.content').click(function(){
+                        location.href='./MINWOODA/TEST_DETAIL-5.html';
+                    });
+                });
             
             var td = '<td>' + 
                         '<div class="content">' +
@@ -395,7 +406,11 @@
             $('.cheart',this).attr('src','./images/icon/main/heart2.png');
         });
 
-
+        $(function(){
+            $('.content').click(function(){
+                location.href='./MINWOODA/TEST_DETAIL-5.html';
+            });
+        });
         
       </script>
 
