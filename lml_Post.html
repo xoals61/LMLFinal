@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -266,4 +267,274 @@
 
       
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메인</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/final_main.css">
+    <link rel="stylesheet" href="./css/final_Settings.css">
+    <link rel="stylesheet" href="./css/final_post.css">
+    <script src="https://kit.fontawesome.com/e309636978.js" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+    <header>
+        <div class="hTitle">
+            <div class="nav1">
+                <div class="hTitle1"><img src="./images/logo/logo_medium.png" class="titleImg"/></div>
+                <div class="hTitle1">
+                    <form action="#" autocomplete="off">
+                        <fieldset class="sUrl">
+                            <input class="searchInput" type="text" required placeholder=" 검색">
+                            <div class="sAfter"></div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="hTitle1">
+                    <div class="htMenu">
+                        <div class="myMenu">
+                            <img src="./images/icon/menu/iconmonstr-menu-thin-72.png"><!-- 이미지 클릭 시 서브메뉴 나옴 -->
+                            <ul class="mySub">
+                                <li><div class="mySub1">마이페이지</div></li>
+                                <li><div class="mySub1">설정</div></li>
+                                <li><div class="mySub1">로그아웃</div></li>
+                            </ul>
+                        </div><!--메뉴-->
+                        <div class="heart"><img src="./images/icon/menu/iconmonstr-heart-thin-72.png" class="heart heartIcon"></div><!--알림-->
+                        <div><img src="./images/icon/menu/iconmonstr-speech-bubble-thin-72.png"></div><!--채팅-->
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="hMenu">
+            <div class="hMenu1">
+                <div class="hMenu2 on"><span>인기순</span></div>
+                <div class="hMenu2"><span>최신순</span></div>
+                <div class="hMenu2"><span>팔로잉</span></div>
+                <div class="hMenu2"><span>QnA</span></div>
+                <span></span>
+            </div>
+            
+        </div>
+    </header>
+    <section>
+        <div class="AContent">
+            <div class="Atable">
+                <div class="Abox">
+                    
+                            <br>
+                            <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 게시물 작성</h2>
+                            <br>
+                            <hr>
+                            <div id="side">
+                                <h1>&nbsp;&nbsp;<i class="fas fa-user-circle"></i></h1> 
+                                <h6>&nbsp;동학개미</h6>
+                                
+                                <br>
+                               <select name="follow">
+                                  <option value="1">전체공개</option>
+                                  <option value="2">팔로우만 보기</option>
+                                  <option value="3">나만 보기</option>
+                               </select>
+                            </div>
+
+                            <div id="contents">
+                                <textarea name=content rows="15" cols="110">
+
+                                </textarea>
+                                
+                            </div>
+
+                            <div class="my-box">
+                                <h5>게시물에 추가</h5> 
+                                <div>
+                                    <br>
+                                    <ul>
+                                        <h2>
+                                        <li><a href="#a"><i class="fas fa-camera" aria-hidden="true"></i></a></li>
+                                        <li><a href="#a"><i class="fas fa-share-alt" aria-hidden="true"></i></a></li>
+                                        <li><a href="#a"><i class="fas fa-user-plus" aria-hidden="true"></i></a></li>
+                                       </h2>
+                                    </ul>
+
+                                </div>
+
+                                <script type="text/javascript" src="./js/jquery-3.1.0.min.js" charset="utf-8"></script>
+                                <script type="text/javascript">
+        
+                                 var sel_files = [];
+ 
+                                $(document).ready(function() {
+                                $("#input_imgs").on("change", handleImgsFilesSelect);
+                                    }); 
+ 
+                                function handleImgsFilesSelect(e) {
+                                var files = e.target.files;
+                                var filesArr = Array.prototype.slice.call(files);
+ 
+                                filesArr.forEach(function(f) {
+                                    if(!f.type.match("image.*")) {
+                                        alert("확장자는 이미지 확장자만 가능합니다.");
+                                        return;
+                                     }
+ 
+                                    sel_files.push(f);
+ 
+                                var reader = new FileReader();
+                                reader.onload = function(e) {
+                                var img_html = "<img src=\"" + e.target.result + "\" />";
+                                $(".imgs_wrap").append(img_html);
+                                     }
+                                 reader.readAsDataURL(f);
+                                    });
+                                 }
+ 
+                            </script>
+
+ 
+                        <div>
+                          <input type="file" id="input_imgs" multiple />
+                        </div>
+ 
+                       <div>
+                         <div class="imgs_wrap">
+            
+                         </div>
+                      </div>
+
+                               
+                               
+                            </div>
+
+                           <div>
+                                <input class="aaa" type="submit" value="등록" onclick="test1()">
+                                <input class="bbb" type="submit" value="취소" onclick="location='lml_main.html'">     
+                          </div>
+                            <script>
+                                function test1() {
+                                    alert("게시물이 등록되었습니다.");
+                                }
+                            </script> 
+                            
+                            
+                                
+                        </div>
+                        </div>
+                    
+
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /*이미지 프리뷰 보기*/
+        var sel_file;
+
+        $(document).ready(function(){
+            $("#file").on("change",handleImgFileSelect);
+        });
+
+        function handleImgFileSelect(e){
+            var files = e.target.files;
+            var filesArr = Array.prototype.slice.call(files);
+
+            filesArr.forEach(function(f){
+                if(!f.type.Math("image.*")){
+                    alert("이미지 파일만 가능합니다.");
+                    return;
+                }
+
+                sel_file = f;
+
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    $("#img").attr("src",e.target.result);
+                }
+                reader.readAsDataURL(f);
+            });
+        }
+    </script>
+
+<script type="text/javascript">
+    /*iput태그 파일*/
+    $(function () {    
+    $('#btn-upload').click(function (e) {
+    e.preventDefault();   
+    $('#file').click();
+    });
+    
+    });
+      function changeValue(obj){
+          alert(obj.value);
+      }        
+    </script>
+
+      <script>
+          /* 상단 메뉴 스크롤 */
+          $(function () {
+            var lastScrollTop = 0,
+                delta = 15;
+            $(window).scroll(function (event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".hMenu").css("top", "0px");
+                } else {
+                    $(".hMenu").css("top", "50px");
+                }
+                lastScrollTop = st;
+            });
+        });
+
+        $(document).ready(function(){
+            $('.hMenu2').on('click', function(){
+                $(this).addClass('on');
+                $(this).siblings().removeClass('on');
+            });
+        });
+      </script>
+
+      <script>
+        /* 마이페이지 햄버거메뉴 */
+        $(document).ready(function(){
+            $(".mySub").hide();
+            $(".myMenu").click(function(){
+                $("ul",this).slideToggle("fast");
+            });
+        });
+
+        $("body").click(function(e){
+            if(!$(".myMenu").has(e.target).length){
+                $(".mySub").hide();
+            }
+        });
+
+
+        /* 알림 아이콘 클릭 시 아이콘 변경 */
+        $(".heart").click(function(){
+            $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-favorite-3-72.png');
+        });
+
+        // 다른곳 클릭하면 하트 원래대로
+        $("body").click(function(e){
+            if(!$(".heart").has(e.target).length){
+                $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-heart-thin-72.png');
+            }
+        });
+        
+      </script>
+
+      
+</body>
+>>>>>>> Stashed changes
 </html>
