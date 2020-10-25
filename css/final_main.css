@@ -85,6 +85,18 @@
 
         /* 검색창 */
 
+        /* 로그인 버튼 */
+        .loginBtn{
+            width: 100px;
+            height: 30px;
+            background: rgb(156, 156, 156);
+            margin: 10px 0px;
+            border-radius: 12px 12px;
+            text-align: center;
+            color: white;
+            font-weight: 400;
+        }
+
         /* 알림 채팅 마이페이지 */
 
         .htMenu div{
