@@ -61,6 +61,32 @@
                     <img src="images/icon/main/plus.png">
                 </div>
             </a>
+            <div class="choice">
+                <p class="pchoice">체형별 보기</p>
+                <div class="choice1">
+                    <div>
+                        키 : 
+                        <select name="height">
+                            <option value="">-----</option>
+                            <option value="1">140cm~150cm</option>
+                            <option value="2">150cm~160cm</option>
+                            <option value="3">160cm~170cm</option>
+                            <option value="4">170cm~180cm</option>
+                        </select>&nbsp;&nbsp;&nbsp;
+                        몸무게 : 
+                        <select name="weight">
+                            <option value="">-----</option>
+                            <option value="1">40kg~50kg</option>
+                            <option value="2">50kg~60kg</option>
+                            <option value="3">60kg~70kg</option>
+                            <option value="4">70kg~80kg</option>
+                            <option value="4">80kg~90kg</option>
+                        </select>&nbsp;&nbsp;&nbsp;
+                        <button>체형별 보기</button>
+                    </div>
+                    <div class="close"></div>
+                </div>
+            </div>
             <div class="ctable">
                 <table id="table">
                     <tr>
@@ -346,6 +372,21 @@
             }
         });
 
+        /* 체형별 */
+        $( document ).ready( function() {
+            $('.choice1').hide();
+            $( '.pchoice' ).click( function() {
+                $( '.choice' ).animate( {
+                    width: '1106px',
+                    height: '50px'
+                }, 400 );
+                $('.choice1').show();
+                $('.pchoice').hide();
+            } );
+
+
+        });
+
             //스크롤 바닥 감지
             window.onscroll = function (e) {
 
@@ -417,7 +458,7 @@
                 } );
                 $( '.upBtn' ).click( function() {
                     $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
-                    // return false;
+                    return false;
                 } );
             } );
 

@@ -39,6 +39,38 @@
             height: 70px;
         }
 
+        /* 체형별 선택 */
+        .choice{
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            margin: 109px 410px 0px;
+            border-radius: 8px 8px;
+            border:1px solid rgb(216, 213, 213);
+            background-color: white;
+            float: right;
+        }
+
+        .pchoice{
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+
+        .choice1{
+            position: absolute;
+            margin: 10px 300px;
+        }
+
+        .close{
+            width: 10px;
+            height: 10px;
+            margin: 19px 20px;
+            background-color: pink;
+        }
+
+        /* 게시물 테이블 */
         .ctable{
             width: 1920px;
             min-width: 1400px;
