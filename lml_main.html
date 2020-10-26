@@ -53,6 +53,9 @@
     </header>
     <section>
         <div class="scContent">
+            <div class="upBtn">
+                <img src="./images/icon/main/arrow.png">
+            </div>
             <a href="./lml_Post.html">
                 <div class="postBtn">
                     <img src="images/icon/main/plus.png">
@@ -301,7 +304,7 @@
                 if ((st > lastScrollTop) && (lastScrollTop > 0)) {
                     $(".hMenu").css("top", "0px");
                 } else {
-                    $(".hMenu").css("top", "50px");
+                    $(".hMenu").css("top", "60px");
                 }
                 lastScrollTop = st;
             });
@@ -345,6 +348,7 @@
 
             //스크롤 바닥 감지
             window.onscroll = function (e) {
+
                 // 게시물 마우스오버
                 $(document).ready(function(){
                     $('.chover').hide();
@@ -400,6 +404,22 @@
                     $('#table').append(addContent);
                 }
             }; 
+
+            /* 맨 위로 가는 버튼 */
+            $( document ).ready( function() {
+                $('.upBtn').hide();
+                $( window ).scroll( function() {
+                    if ( $( this ).scrollTop() > 200 ) {
+                        $( '.upBtn' ).fadeIn();
+                    } else {
+                        $( '.upBtn' ).fadeOut();
+                    }
+                } );
+                $( '.upBtn' ).click( function() {
+                    $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+                    // return false;
+                } );
+            } );
 
         /* 게시물 좋아요 아이콘 클릭 시 아이콘 변경 */
         $(".cHeart").click(function(){
