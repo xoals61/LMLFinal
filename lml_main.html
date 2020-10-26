@@ -64,10 +64,10 @@
             <div class="choice">
                 <p class="pchoice">체형별 보기</p>
                 <div class="choice1">
-                    <div>
+                    <div class="cSelect">
                         키 : 
                         <select name="height">
-                            <option value="">-----</option>
+                            <option value="">---</option>
                             <option value="1">140cm~150cm</option>
                             <option value="2">150cm~160cm</option>
                             <option value="3">160cm~170cm</option>
@@ -75,7 +75,7 @@
                         </select>&nbsp;&nbsp;&nbsp;
                         몸무게 : 
                         <select name="weight">
-                            <option value="">-----</option>
+                            <option value="">---</option>
                             <option value="1">40kg~50kg</option>
                             <option value="2">50kg~60kg</option>
                             <option value="3">60kg~70kg</option>
@@ -84,7 +84,9 @@
                         </select>&nbsp;&nbsp;&nbsp;
                         <button>체형별 보기</button>
                     </div>
-                    <div class="close"></div>
+                    <div class="close">
+                        <img src="./images/icon/main/close.png">
+                    </div>
                 </div>
             </div>
             <div class="ctable">
@@ -378,10 +380,23 @@
             $( '.pchoice' ).click( function() {
                 $( '.choice' ).animate( {
                     width: '1106px',
-                    height: '50px'
+                    height: '50px',
+                    cursor: 'pointer'
                 }, 400 );
+                $('.choice').css('cursor','default');
                 $('.choice1').show();
                 $('.pchoice').hide();
+            } );
+            $( '.close' ).click( function() {
+                $( '.choice' ).animate( {
+                    width: '100px',
+                    height: '30px'
+                }, 400 );
+                $('.choice1').hide();
+                setTimeout(function() {
+                    $('.pchoice').show();
+                }, 400);
+                $('.choice').css('cursor','pointer');
             } );
 
 

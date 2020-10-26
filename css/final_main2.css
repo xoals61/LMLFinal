@@ -49,6 +49,7 @@
             border:1px solid rgb(216, 213, 213);
             background-color: white;
             float: right;
+            cursor: pointer;
         }
 
         .pchoice{
@@ -58,16 +59,29 @@
             text-align: center;
         }
 
+        .cSelect{
+            width: 500px;
+        }
+
         .choice1{
             position: absolute;
             margin: 10px 300px;
         }
 
         .close{
-            width: 10px;
-            height: 10px;
-            margin: 19px 20px;
-            background-color: pink;
+            position: absolute;
+            float: right;
+            width: 15px;
+            height: 15px;
+            margin: -21px 760px;
+            border-radius: 50%;
+        }
+
+        .close img{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            margin: -4px;
         }
 
         /* 게시물 테이블 */
