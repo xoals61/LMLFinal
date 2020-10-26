@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html>
     <head>
-        <title>로그인 / 회원가입 </title>
+        <title>로그인 / 회원가입 폼 템플릿</title>
         <link rel="stylesheet" href="./CSS/final_login.css">
     </head>
     <body>
@@ -18,15 +17,12 @@
                     <img src="images/gl.png" alt="google">
                 </div>
                 <form id="login" action="" class="input-group">
-                    <input type="text" class="input-field" placeholder="User id" required>
-                    <input type="password" class="input-field" placeholder="Enters Password" required>
-                    <!-- <input type="checkbox" class="checkbox"><span>Remember Password</span> -->
-                    <br><br><br>
-                    <a href="./lml_main_logout.html">
+                    <input type="text" class="input-field" placeholder="User name or Email" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
                     <button class="submit" onclick="location.href='../lml_main.html'"> Login</button>
                 </form>
                 <form id="register" action="" class="input-group">
-                   
                     <input type="text" class="input-field" placeholder="User id" required>
                     <input type="email" class="input-field" placeholder="Your Email" required>
                     <input type="password" class="input-field" placeholder="Enter Password" required>
@@ -39,9 +35,9 @@
                     <input type="radio" name="gender" class="radio"  value="female">female <br>
                     </div>
                     <div class="Register">
-                    <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
-                    </div>
-                    <button class="submit">REGISTER</button>
+                        <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
+                        </div>
+                        <button class="submit">REGISTER</button>
                 </form>
             </div>
         </div>
@@ -64,4 +60,4 @@
             }
         </script>
     </body>
-</html>
+</html> 

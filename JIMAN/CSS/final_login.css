@@ -6,7 +6,7 @@
     font-weight: bold;
 }
 .wrap {
-    height: fit-content;
+    height: 100%;
     width: 100%;
     background-image: url(../images/back4.jpg);
     background-position: center;
@@ -74,7 +74,7 @@
     cursor: pointer;
 }
 .input-group {
-    top: 180px;
+    top: 166px;
     position: absolute;
     width: 280px;
     transition: .5s;
