@@ -68,12 +68,37 @@
             margin: 10px 300px;
         }
 
+        .choiceBtn{
+            font-size: 13px;
+            position: relative;
+            width: 83px;
+            height: 25px;
+            text-align: center;
+            border-radius: 5px 5px;
+            cursor: pointer;
+            color: #000000;
+            background-color: #f5f5f5da;
+            border: #acacac solid 1px;
+            padding: 2px;
+            transition: all 0.1s ease;
+            margin: -24px 325px;
+        }
+
+        .choiceBtn:hover {
+            color: #ffffff;
+            background-color: #8a8a8ac9;
+            border: #8a8a8ac9 solid 1px;
+            animation: 0.1s step-end 0 2;
+            transition: all 0.2s ease 0.2s;
+            cursor: pointer;
+        }
+
         .close{
             position: absolute;
             float: right;
             width: 15px;
             height: 15px;
-            margin: -21px 760px;
+            margin: 6px 760px;
             border-radius: 50%;
         }
 
