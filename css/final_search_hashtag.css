@@ -1,16 +1,16 @@
-        *{
+
+        * {
             font-family: 'Noto Sans KR', sans-serif;
         }
 
-        /* 본문 */
-        .scContent {
+        body{
             background-color: rgb(248, 248, 248);
         }
 
         /* 위로가기 버튼 */
         .upBtn{
             position: fixed;
-            margin: 690px 0px 0px 1612px;
+            margin: 750px 0px 0px 1612px;
             width: 42px;
             height: 42px;
             border-radius: 50%;
@@ -24,97 +24,34 @@
             margin: 7px 8.5px;
         }
 
-        /* 글쓰기 버튼 */
-        .postBtn{
-            position: fixed;
-            margin: 750px 0px 0px 1600px;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            background: white;
-        }
-
-        .postBtn img{
-            width: 70px;
-            height: 70px;
-        }
-
-        /* 체형별 선택 */
-        .choice{
-            position: absolute;
-            width: 100px;
-            height: 30px;
-            margin: 109px 410px 0px;
-            border-radius: 8px 8px;
-            border:1px solid rgb(216, 213, 213);
-            background-color: white;
-            float: right;
-            cursor: pointer;
-        }
-
-        .pchoice{
-            position: absolute;
-            width: 100px;
-            height: 30px;
-            text-align: center;
-        }
-
-        .cSelect{
-            width: 500px;
-        }
-
-        .choice1{
-            position: absolute;
-            margin: 10px 300px;
-        }
-
-        .choiceBtn{
-            font-size: 13px;
-            position: relative;
-            width: 83px;
-            height: 25px;
-            text-align: center;
-            border-radius: 5px 5px;
-            cursor: pointer;
-            color: #000000;
-            background-color: #f5f5f5da;
-            border: #acacac solid 1px;
-            padding: 2px;
-            transition: all 0.1s ease;
-            margin: -24px 325px;
-        }
-
-        .choiceBtn:hover {
-            color: #ffffff;
-            background-color: #a3a3a3c9;
-            border: #a3a3a3c9 solid 1px;
-            animation: 0.1s step-end 0 2;
-            transition: all 0.2s ease 0.2s;
-            cursor: pointer;
-        }
-
-        .close{
-            position: absolute;
-            float: right;
-            width: 15px;
-            height: 15px;
-            margin: 6px 760px;
-            border-radius: 50%;
-        }
-
-        .close img{
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            margin: -4px;
-        }
-
-        /* 게시물 테이블 */
-        .ctable{
+        /* 해쉬태그 검색 구역 */
+        .hashtagSection{
             width: 1920px;
             min-width: 1400px;
-            height: 100%;
-            padding: 170px 386px;
+            margin-top: 60px;
+        }
+        
+        .hashInfo{
+            padding-top: 16px;
+            height: 60px;
+        }
+
+        .hashtag{
+            float: left;
+            font-size: 30px;
+            font-weight: 500;
+            color: black;
+            margin-left: 400px;
+        }
+
+        .hashMore{
+            float: left;
+            margin: 15px 15px 0px;
+        }
+
+        /* 검색 게시물 테이블 */
+        .hashTable{
+            padding: 12px 386px;
         }
 
         .content{
@@ -256,25 +193,6 @@
             height: 20px;
             margin: 15px 48px;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
