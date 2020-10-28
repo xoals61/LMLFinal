@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>검색(해쉬태그)</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/final_main.css">
+    <link rel="stylesheet" href="./css/final_search_hashtag.css">
+</head>
+<body>
+    <header>
+        <div class="hTitle">
+            <div class="nav1">
+                <div class="hTitle1"><a href="./lml_main.html"><img src="./images/logo/logo_medium.png" class="titleImg"/></a></div>
+                <div class="hTitle1">
+                    <form action="#" autocomplete="off">
+                        <fieldset class="sUrl">
+                            <input class="searchInput" type="text" required placeholder=" 검색">
+                            <div class="sAfter"></div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="hTitle1">
+                    <div class="htMenu">
+                        <div class="myMenu">
+                            <img src="./images/icon/menu/iconmonstr-menu-thin-72.png"><!-- 이미지 클릭 시 서브메뉴 나옴 -->
+                            <ul class="mySub">
+                                <li><div class="mySub1">마이페이지</div></li>
+                                <a href="./lml_Settings.html"><li><div class="mySub1">설정</div></li></a>
+                                <a href="./lml_main_logout.html"><li><div class="mySub1">로그아웃</div></li></a>
+                            </ul>
+                        </div><!--메뉴-->
+                        <div class="heart"><img src="./images/icon/menu/iconmonstr-heart-thin-72.png" class="heart heartIcon"></div><!--알림-->
+                        <div><img src="./images/icon/menu/iconmonstr-speech-bubble-thin-72.png"></div><!--채팅-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <section>
+        <div class="upBtn">
+            <img src="./images/icon/main/arrow.png">
+        </div>
+        <div class="hashtagSection">
+            <div class="hashInfo">
+                <div class="hashtag">
+                    #daily
+                </div>
+                <div class="hashMore">
+                    132,542
+                </div>
+            </div>
+            <div class="hashTable">
+                <table id="table">
+                    <tr>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/buzz.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pbuzz.jpg">
+                                            </div>
+                                            <div class="userId">iambuzz</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To Infinity and Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/alien.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/palien.png">
+                                            </div>
+                                            <div class="userId">_alien88_</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To To To Infinity Infinity Infinity and and and Beyond Beyond Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/andy.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pandy.jpg">
+                                            </div>
+                                            <div class="userId">chilly_b_f</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>시작부터 다 예상밖에 놀라운 스따일 작은 스탭들로 뿜어내 빅바입</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png"  class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/buzz.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pbuzz.jpg">
+                                            </div>
+                                            <div class="userId">iambuzz</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To Infinity and Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/alien.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/palien.png">
+                                            </div>
+                                            <div class="userId">_alien88_</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To To To Infinity Infinity Infinity and and and Beyond Beyond Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/andy.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pandy.jpg">
+                                            </div>
+                                            <div class="userId">chilly_b_f</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>시작부터 다 예상밖에 놀라운 스따일 작은 스탭들로 뿜어내 빅바입</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png"  class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/buzz.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pbuzz.jpg">
+                                            </div>
+                                            <div class="userId">iambuzz</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To Infinity and Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/alien.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/palien.png">
+                                            </div>
+                                            <div class="userId">_alien88_</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To To To Infinity Infinity Infinity and and and Beyond Beyond Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/andy.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pandy.jpg">
+                                            </div>
+                                            <div class="userId">chilly_b_f</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>시작부터 다 예상밖에 놀라운 스따일 작은 스탭들로 뿜어내 빅바입</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png"  class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/buzz.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pbuzz.jpg">
+                                            </div>
+                                            <div class="userId">iambuzz</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To Infinity and Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/alien.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/palien.png">
+                                            </div>
+                                            <div class="userId">_alien88_</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>To To To Infinity Infinity Infinity and and and Beyond Beyond Beyond</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png" class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content">
+                                <div><img src="./images/mainImg/andy.jpg" class="cImg"></div>
+                                <div class="chover">
+                                    <div class="chContnet">
+                                        <div class="user">
+                                            <div class="userImg">
+                                                <img src="./images/mainImg/pandy.jpg">
+                                            </div>
+                                            <div class="userId">chilly_b_f</div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="userCon"><p>시작부터 다 예상밖에 놀라운 스따일 작은 스탭들로 뿜어내 빅바입</p></div>
+                                        </div>
+                                        <div class="cBtn">
+                                            <div class="cHeart"><img src="./images/icon/main/heart.png"  class="cheart"></div>
+                                            <div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>
+                                            <div class="cEtc"><img src="images/icon/main/etc.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* 마이페이지 햄버거메뉴 */
+        $(document).ready(function(){
+            $(".mySub").hide();
+            $(".myMenu").click(function(){
+                $("ul",this).slideToggle("fast");
+            });
+        });
+
+        $("body").click(function(e){
+            if(!$(".myMenu").has(e.target).length){
+                $(".mySub").hide();
+            }
+        });
+
+        /* 알림 아이콘 클릭 시 아이콘 변경 */
+        $(".heart").click(function(){
+            $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-favorite-3-72.png');
+        });
+
+        // 다른곳 클릭하면 하트 원래대로
+        $("body").click(function(e){
+            if(!$(".heart").has(e.target).length){
+                $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-heart-thin-72.png');
+            }
+        });
+        
+    </script>
+
+    <script>
+        /* 맨 위로 가는 버튼 */
+        $( document ).ready( function() {
+            $('.upBtn').hide();
+            $( window ).scroll( function() {
+                if ( $( this ).scrollTop() > 200 ) {
+                    $( '.upBtn' ).fadeIn();
+                } else {
+                    $( '.upBtn' ).fadeOut();
+                }
+            } );
+            $( '.upBtn' ).click( function() {
+                $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+                return false;
+            } );
+        } );
+
+        // 게시물 마우스오버
+        $(document).ready(function(){
+            $('.chover').hide();
+            $('.content').mouseover(function(){
+                $('.chover',this).show();
+            });
+            $('.content').mouseout(function(){
+                $('.chover').hide();
+            });
+        });
+
+        //스크롤 바닥 감지
+        window.onscroll = function (e) {
+            // 게시물 마우스오버
+            $(document).ready(function(){
+                $('.chover').hide();
+                $('.content').mouseover(function(){
+                    $('.chover',this).show();
+                });
+                $('.content').mouseout(function(){
+                     $('.chover').hide();
+                });
+            });
+
+            // 게시물 좋아요 아이콘 클릭 시 아이콘 변경
+            $(".cHeart").click(function(){
+                $('.cheart',this).attr('src','./images/icon/main/heart2.png');
+            });
+
+            $(function(){
+                $('.content').click(function(){
+                    location.href='./MINWOODA/TEST_DETAIL-5.html';
+                });
+            });
+
+            var td = '<td>' +
+                        '<div class="content">' +
+                            '<div><img src="./images/mainImg/andy.jpg" class="cImg"></div>' +
+                            '<div class="chover">' +
+                                '<div class="chContnet">' +
+                                    '<div class="user">' +
+                                        '<div class="userImg">' +
+                                            '<img src="./images/mainImg/pandy.jpg">' +
+                                        '</div>' +
+                                        '<div class="userId">chilly_b_f</div>' +
+                                    '</div>' +
+                                    '<div class="con">' +
+                                        '<div class="userCon"><p>시작부터 다 예상밖에 놀라운 스따일 작은 스탭들로 뿜어내 빅바입</p></div>' +
+                                    '</div>' +
+                                    '<div class="cBtn">' +
+                                        '<div class="cHeart"><img src="./images/icon/main/heart.png"  class="cheart"></div>' +
+                                        '<div class="cComment"><div class="cbox"></div><img src="./images/icon/main/comment.png"></div>' +
+                                        '<div class="cEtc"><img src="images/icon/main/etc.png"></div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</td>';
+
+            //추가되는 콘텐츠
+            //window height + window scrollY 값이 document height보다 클 경우,
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            //실행할 로직 (콘텐츠 추가)
+
+            var addContent = '<tr>' + td + td + td + '</tr>' + '<tr>' + td + td + td + '</tr>' + '<tr>' + td + td + td + '</tr>' + '<tr>' + td + td + td + '</tr>';
+
+                //article에 추가되는 콘텐츠를 append
+                $('#table').append(addContent);
+            }
+        };
+    </script>
+
+      
+</body>
+</html>
