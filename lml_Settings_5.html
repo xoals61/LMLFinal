@@ -2,14 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>lml_Withdrawal</title>
+    <title>lml_Email</title>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/final_main.css">
-    <link rel="stylesheet" href="./css/final_Settings_Withdrawal.css">
-</head>
+    <link rel="stylesheet" href="./css/final_Settings_address.css">
 </head>
 <body>
     <header>
@@ -39,6 +38,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
         <div class="hMenu">
             <div class="hMenu1">
@@ -57,52 +58,32 @@
                 <div class="Abox">
                    <div class="lContent">
                     <div class="lmenu">
-                        <li class="minimenu put"><a href="./lml_Settings.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mprofile.png">프로필 수정</a></li>
+                        <li class="minimenu"><a href="./lml_Settings.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mprofile.png">프로필 수정</a></li>
                         <li class="minimenu"><a href="./lml_Settings_2.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Mrock.png">비밀번호 변경</a></li>
-                        <li class="minimenu"><a href="./lml_Settings_5.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/xxx.png">친구관리</a></li>
+                        <li class="minimenu put"><a href="./lml_Settings_5.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/xxx.png">친구관리</a></li>
                         <li class="minimenu"><a href="./lml_Settings_3.html" class="Ma"> <img class="mainbtn" src="./images/icon/settings/Memail.png">이메일 문의</a></li>
-                     </div>
-                </div>
-                   <div class="rContent">
-                    <form method="POST" action="./lml_main.html" class="withdrawal_info">
-                        <div class="Withdraw_input_container">
-                            <div class="Email With">이메일
-                                <input class="withdraw_input" id="email" name="origin_password" type="email" maxlength="30" >
-                            </div>
-                            
-                            <div class="Id With">아이디
-                                <input class="withdraw_input" id="id" name="password1" type="text" maxlength="13" >
-                            </div>
-
-                            <div class="PWD With">비밀번호
-                                <input class="withdraw_input" id="Pwd" name="password2" type="password" maxlength="13" >
-                            </div>
-                            
-                        </div>
-                        <div class="withdrawal_btn_container">
-                            <input type="submit" class="withdrawal" id="submit" value="탈퇴하기">
-                        </div>
+                     
                     </div>
                 </div>
-            </form>
+                <div class="rContent">
+
+                    <div class="address">
+                            <table class="add_table">
+                                <tr>
+                                    <td><img src="./JIMAN/images/무지갱.ico" alt="#"></td>
+                                    <td>사용자id</td>
+                                    <td>닉네임</td>
+                                    <td><button>팔로잉</button></td>
+                                  
+                                </tr>
+                            </table>
+                    </div>
+               </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        /*입력이 되지 않았을 때*/
-        $("#submit").click(function(){
-             if($.trim($("#email").val())==''||$.trim($("#id").val())==''||$.trim($("#Pwd").val())==''){
-                  alert("모두 입력해주세요.");
-                  return false;
-                } else{
-                    alert("탈퇴되었습니다.");
-                }
-                 $(".withdrawal_info").submit();
-         });
-    </script>
-        
     <script>
         /*선택 메뉴 고정*/
         $(document).ready(function(){
@@ -136,7 +117,9 @@
                 $(this).siblings().removeClass('on');
             });
         });
+      </script>
 
+      <script>
         /* 마이페이지 햄버거메뉴 */
         $(document).ready(function(){
             $(".mySub").hide();
@@ -162,7 +145,8 @@
             if(!$(".heart").has(e.target).length){
                 $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-heart-thin-72.png');
             }
-        }); 
+        });
+        
       </script>
 
       
