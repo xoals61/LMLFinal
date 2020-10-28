@@ -18,7 +18,7 @@
     background-color: white;
     position: absolute;
     left: 450px;
-    top: 37px;
+    top: 25px;
 }
 
 /* 사진 */
@@ -45,25 +45,66 @@
 .board-user{
     width: 355px;
     height: 80px;
-    background: slateblue;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.board-userImg{
+    width: 55px;
+    height: 55px;
+    float: left;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 50%;
+    background: gray;
+    margin: 13px 14px;
+    overflow: hidden;
+}
+
+.board-userImg img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: -1px;
+    cursor: pointer;
+}
+
+.board-id{
+    width: 200px;
+    height: 80px;
+    float: left;
+    padding: 24px 0px;
+}
+
+.board-id p{
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.board-follow{
+    width: 60px;
+    height: 80px;
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 23px 8px 23px 0px;
+    cursor: pointer;
 }
 
 .board-text{
     width: 355px;
     height: 345px;
-    background: tan;
+    border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 .board-stateicon{
     width: 355px;
     height: 80px;
-    background: rgb(136, 253, 156);
+    border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 .board-clothesInfo{
     width: 355px;
     height: 345px;
-    background: rgb(244, 255, 179);
 }
 
 
@@ -83,7 +124,7 @@
 .board-bottom{
     width: 600px;
     height: 250px;
-    background:skyblue;
     position: absolute;
     margin: 600px 0px 0px 0px;
+    border-right: 1px solid rgb(190, 190, 190);
 }
