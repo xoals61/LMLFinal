@@ -81,6 +81,9 @@
              <div>
              </div>
             </div>
+            <div class="tagmenu">
+               <span><button id="my" class="tagbtn" onclick="my()">MY 게시물</button> <button id="tag" class="tagbtn" onclick="tag()">태그된 게시물</button></span>
+            </div>
             <div class="mytable">
                 <table>
                 <tr>
@@ -98,13 +101,88 @@
                     </td>
                 </tr>
             </table>
+            
+            </div>
+            <div class="tagtable">
+                <table>
+                <tr>
+                    <td>
+                        <div class="content">
+                            <div class=img><img src="./images/블루 (1).jpg" class="cImg"></div>
+                    </td>
+                    <td>
+                        <div class="content">
+                            <div class=img><img src="./images/블루 (3).jpg" class="cImg"></div>
+                    </td>
+                    <td>
+                        <div class="content">
+                            <div class=img><img src="./images/무지갱.ico" class="cImg"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="content">
+                            <div class=img><img src="./images/블루 (1).jpg" class="cImg"></div>
+                    </td>
+                    <td>
+                        <div class="content">
+                            <div class=img><img src="./images/블루 (3).jpg" class="cImg"></div>
+                    </td>
+                    <td>
+                        <div class="content">
+                            <div class=img><img src="./images/무지갱.ico" class="cImg"></div>
+                    </td>
+                </tr>
+            </table>
+            
             </div>
         </div>
-       
-
-
-
-
+   
     </section>
+    
+    <script>
+        $(document).ready(function() {
+        $('mytable').show(); //페이지를 로드할 때 표시할 요소
+        $('.tagtable').hide(); //페이지를 로드할 때 숨길 요소
+        $('#tag').click(function(){
+        $ ('.mytable').hide(); //클릭 시 첫 번째 요소 숨김
+        $ ('.tagtable').show(); //클릭 시 두 번째 요소 표시
+        $('#my').click(function(){
+         $ ('.tagtable').hide(); //클릭 시 첫 번째 요소 숨김
+        $ ('.mytable').show(); //클릭 시 두 번째 요소 표시
+        })
+        return false;
+        });
+        });
+
+
+        /* 마이페이지 햄버거메뉴 */
+        $(document).ready(function(){
+            $(".mySub").hide();
+            $(".myMenu").click(function(){
+                $("ul",this).slideToggle("fast");
+            });
+        });
+
+        $("body").click(function(e){
+            if(!$(".myMenu").has(e.target).length){
+                $(".mySub").hide();
+            }
+        });
+
+
+        /* 알림 아이콘 클릭 시 아이콘 변경 */
+        $(".heart").click(function(){
+            $('.heartIcon').attr('src','../images/icon/menu/iconmonstr-favorite-3-72.png');
+        });
+
+        // 다른곳 클릭하면 하트 원래대로
+        $("body").click(function(e){
+            if(!$(".heart").has(e.target).length){
+                $('.heartIcon').attr('src','../images/icon/menu/iconmonstr-heart-thin-72.png');
+            }
+        });
+    </script>
+    
 </body>
 </html>

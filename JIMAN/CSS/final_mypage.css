@@ -1,6 +1,6 @@
 
 .myPage{
-    width: 100%;
+    width: 1920px;
     height: 100%;
 }
 .my_top{
@@ -9,6 +9,7 @@
     /* background: red; */
     text-align: center;
     position: relative;
+    min-width: 1120px;
 }
 .my_photo{
     position:relative;
@@ -36,9 +37,10 @@
 .top{
     position: relative;
     display: inline-block;
-    width: 1200px;
+    min-width: 1200px;
     height: 377px;
     border-bottom: 1px solid #b3b3b3;
+    
 }
 .info_btn{
     margin-left: 60px;
@@ -91,6 +93,35 @@
     background-color: rgb(160, 160, 160);
     margin: 12px;
 }
+.content:hover{
+    
+   opacity: 0.5;
+
+}
+
 .img{
     display: block;    
+}
+.tagmenu{
+    text-align: end;
+    width: 80%;
+    height: 5px;
+    padding-top: 5px;
+}
+
+.tagbtn{
+    border: 0;
+    outline: 0;
+    background-color: white;
+    font-weight: bold;
+}
+.tagtable{
+    width: 1920px;
+    min-width: 1400px;
+    height: 100%;
+    padding: 32px 392px;
+}
+table{
+    word-break: break-all;
+    width: 70%;
 }
