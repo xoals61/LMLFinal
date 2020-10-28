@@ -14,12 +14,12 @@
 
 .board-detail{
     width: 955px;
-    height: 860px;
+    height: 850px;
     background-color: white;
     /* position: fixed; */
     position: absolute;
     left: 450px;
-    top: 48px;
+    top: 37px;
     /* border:  1px solid #1a4664; */
     /* display: none; */
 }
