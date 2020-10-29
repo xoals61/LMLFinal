@@ -2,12 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>메인</title>
+    <title>찐메인</title>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/final_main.css">
     <link rel="stylesheet" href="./css/final_main2.css">
+    <link rel="stylesheet" href="./css/final_detail.css">
 </head>
 <body>
     <header>
@@ -27,7 +28,7 @@
                         <div class="myMenu">
                             <img src="./images/icon/menu/iconmonstr-menu-thin-72.png"><!-- 이미지 클릭 시 서브메뉴 나옴 -->
                             <ul class="mySub">
-                                <a href="./JIMAN/MyPage.html"><li><div class="mySub1">마이페이지</div></li></a>
+                                <li><div class="mySub1">마이페이지</div></li>
                                 <a href="./lml_Settings.html"><li><div class="mySub1">설정</div></li></a>
                                 <a href="./lml_main_logout.html"><li><div class="mySub1">로그아웃</div></li></a>
                             </ul>
@@ -52,6 +53,173 @@
         </div>
     </header>
     <section>
+        <!-- ===================================================== 모달 ======================================================== -->
+        <div class="myModal" id="myModal" style="display: none;">
+            <div class="board-detail" id="board-detail"  style="display: none;">
+                <div class="board-img">
+                    <img src="./images/detailImg/theman.jpg">
+                </div>
+                <div class="board-right">
+                    <div class="board-user">
+                        <div class="board-userImg">
+                            <img src="./images/detailImg/40x40man.jpg">
+                        </div>
+                        <div class="board-id"><p>__maybenotyet__</p></div>
+                        <div class="board-follow">팔로잉</div>
+                    </div>
+                    <div class="board-textDiv">
+                        <div class="board-text">글 내용</div>
+                        <div class="board-hashtag">#가을코디 #맨투맨 #맨투맨코디 #흑청바지 #청바지코디 #캐주얼룩 #캐주얼코디 #남자데일리코디</div>
+                    </div>
+                    <div class="board-stateicon">
+                        <div class="board-heartCount">좋아요 234개</div>
+                        <div class="board-heart"><img src="./images/icon/menu/iconmonstr-heart-thin-72.png"></div>
+                        <div class="board-etc"><img src="images/icon/main/menu1.png"></div>
+                    </div>
+                    <div class="board-clothesInfo">
+                        <div class="clothesInfo-div">
+                            <div class="clothes-img">
+                                <img src="./images/detailImg/top.png">
+                            </div>
+                            <div class="clothes-p">
+                                상의
+                            </div>
+                            <div class="clothes-info">
+                                아디다스
+                            </div>
+                        </div>
+                        <div class="clothesInfo-div">
+                            <div class="clothes-img">
+                                <img src="./images/detailImg/pants.png">
+                            </div>
+                            <div class="clothes-p">
+                                하의
+                            </div>
+                            <div class="clothes-info">
+                                아디다스
+                            </div>
+                        </div>
+                        <div class="clothesInfo-div">
+                            <div class="clothes-img">
+                                <img src="./images/detailImg/shoes.png">
+                            </div>
+                            <div class="clothes-p">
+                                신발
+                            </div>
+                            <div class="clothes-info">
+                                아디다스
+                            </div>
+                        </div>
+                        <div class="clothesInfo-div">
+                            <div class="clothes-img">
+                                <img src="./images/detailImg/watch.png">
+                            </div>
+                            <div class="clothes-p">
+                                Acc
+                            </div>
+                            <div class="clothes-info">
+                                아디다스
+                            </div>
+                        </div>
+                        <div class="clothesInfo-div">
+                            <div class="clothes-img">
+                                <img src="./images/detailImg/bag.png">
+                            </div>
+                            <div class="clothes-p">
+                                Etc
+                            </div>
+                            <div class="clothes-info">
+                                아디다스
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-bottom">
+                    <div class="commentCount"><p>댓글 (8)</p></div>
+                    <div class="board-commentDiv">
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                        <div class="board-comment">
+                            <div class="comment-img">
+                                <img src="./images/mainImg/andy.jpg">
+                            </div>
+                            <div class="comment-content">
+                                    <p class="comment-user">iamandy</p>
+                                    <p class="comment-comment">댓글1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-commentWrite">
+                        <div class="comment-write">
+                            <input type="text" placeholder="댓글 달기...">
+                        </div>
+                        <div class="comment-submit">게시</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===================================================== 모달 ======================================================== -->
         <div class="scContent">
             <div class="upBtn">
                 <img src="./images/icon/main/arrow.png">
@@ -240,7 +408,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td id="conte">
                             <div class="content">
                                 <div><img src="./images/mainImg/potato.jpg" class="cImg"></div>
                                 <div class="chover">
@@ -427,11 +595,22 @@
                     $('.cheart',this).attr('src','./images/icon/main/heart2.png');
                 });
 
-                $(function(){
-                    $('.content').click(function(){
-                        location.href='./MINWOODA/TEST_DETAIL-5.html';
-                    });
+                /* 모달팝업 디테일 */
+                var modal = document.getElementById('myModal');
+                var detail = document.getElementById('board-detail');
+                var content = document.getElementById('conte');
+
+                $('.content').click(function(){
+                    $('.myModal').css('display','block');
+                    $('.board-detail').css('display','block');
                 });
+        
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                        detail.style.display = "none";
+                    }
+                }
             
             var td = '<td>' + 
                         '<div class="content">' +
@@ -488,11 +667,22 @@
             $('.cheart',this).attr('src','./images/icon/main/heart2.png');
         });
 
-        $(function(){
-            $('.content').click(function(){
-                location.href='./MINWOODA/TEST_DETAIL-5.html';
-            });
+        /* 모달팝업 디테일 */
+        var modal = document.getElementById('myModal');
+        var detail = document.getElementById('board-detail');
+        var content = document.getElementById('conte');
+
+        $('.content').click(function(){
+            $('.myModal').css('display','block');
+            $('.board-detail').css('display','block');
         });
+ 
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                detail.style.display = "none";
+            }
+        }
         
       </script>
 
