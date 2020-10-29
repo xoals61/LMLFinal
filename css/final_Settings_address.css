@@ -36,6 +36,7 @@
 .rContent{
     height: 100%;
     width: 890px;
+    padding: 71px 0 0 85px;
 }
 
 /*---------------------------------lContent설정--------------------------------- */
@@ -226,11 +227,25 @@ input, textarea:focus {outline:none;}
 
 .address{
     position: relative;
-    width: 82%;
+    width: 729.8px;
     height: 80%;
     background-color: #9c9c9c;
-    margin: 100px 0 0 48px;
 }
 .add_table{
     width: 100%;
+}
+.userimg{
+    width: 100px;
+    height: 100px;
+}
+.imgtd{
+    padding:0 0 0 50px;
+}
+.friends{
+    width: 729.8px;
+    height: 55px;
+    background: orange;
+}
+.fsearch{
+    
 }
