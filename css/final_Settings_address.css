@@ -235,17 +235,32 @@ input, textarea:focus {outline:none;}
     width: 100%;
 }
 .userimg{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
 }
 .imgtd{
-    padding:0 0 0 50px;
+    padding: 19px 0 0 50px;
+    width: 10%;
 }
 .friends{
     width: 729.8px;
     height: 55px;
     background: orange;
+    padding: 13px 0 0 100px;
 }
 .fsearch{
     
+    width: 400px;
+}
+.fbtn{
+    width: 60px;
+    height: 29px;
+}
+.idtd{
+    width: 63%;
+    padding-top: 19px;
+}
+.btntd{
+    padding-left: 126px;
 }
