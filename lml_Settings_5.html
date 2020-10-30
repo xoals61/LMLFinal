@@ -68,12 +68,13 @@
                     </div>
                 </div>
                 <div class="rContent">
-                    <div>
                         <div class="friends">
                             <input class="fsearch" type="text">
                             <input class-="fbtn" type="button" value="검색">
                         </div>
-                    </div>
+                        <div class="change_address">
+                
+                        </div>
                     <div class="address">
                             <table class="add_table">
                                 <tr>
@@ -89,7 +90,7 @@
                                 <tr>
                                     <td class="imgtd" rowspan="2" style="width: 10%;"><img class="userimg" src="./JIMAN/images/무지갱.ico" alt="#"></td>
                                     <td class="idtd" style="width: 30%;">사용자id</td>
-                                    <td class="btntd" rowspan="2" style="width: 30%;"><input class="button2" type="button" value="팔로잉"></td>
+                                    <td class="btntd" rowspan="2" style="width: 30%;"><input class="button1" type="button" value="팔로우"></td>
                                 </tr>
                                 <tr>
                                     <td>닉네임</td>
@@ -105,8 +106,8 @@
                                     <td>닉네임</td>
                                 </tr>
                             </table>
-
                     </div>
+
                </div>
                 </div>
             </div>
@@ -176,15 +177,15 @@
             }
         });
         
-
+        //버튼 값 변경
+       
         $(function(){
-            $('.button2').click( function() {
-                console.log('dd');
-            if( $(this).val() == '팔로잉' ) {
-                $(this).val('언팔로잉');
+            $('.button1').click( function() {
+            if( $(this).val() == '팔로우' ) {
+                $(this).val('팔로잉').css("background","rgb(50, 158, 230)");
             }
             else {
-                $(this).val('팔로잉');
+                $(this).val('팔로우').css("background"," #f5f5f5");
             }
         });
         });
