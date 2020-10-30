@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/final_main.css">
     <link rel="stylesheet" href="./css/final_Settings_address.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </head>
 <body>
     <header>
@@ -77,12 +79,33 @@
                                 <tr>
                                     <td class="imgtd" rowspan="2" style="width: 10%;"><img class="userimg" src="./JIMAN/images/무지갱.ico" alt="#"></td>
                                     <td class="idtd" style="width: 30%;">사용자id</td>
-                                    <td class="btntd" rowspan="2" style="width: 30%;"><button>팔로잉</button></td>
+                                    <td class="btntd" rowspan="2" style="width: 30%;"><input class="button2" type="button" value="팔로잉"></td>
                                 </tr>
                                 <tr>
                                     <td>닉네임</td>
                                 </tr>
                             </table>
+                            <table class="add_table">
+                                <tr>
+                                    <td class="imgtd" rowspan="2" style="width: 10%;"><img class="userimg" src="./JIMAN/images/무지갱.ico" alt="#"></td>
+                                    <td class="idtd" style="width: 30%;">사용자id</td>
+                                    <td class="btntd" rowspan="2" style="width: 30%;"><input class="button2" type="button" value="팔로잉"></td>
+                                </tr>
+                                <tr>
+                                    <td>닉네임</td>
+                                </tr>
+                            </table>
+                            <table class="add_table">
+                                <tr>
+                                    <td class="imgtd" rowspan="2" style="width: 10%;"><img class="userimg" src="./JIMAN/images/무지갱.ico" alt="#"></td>
+                                    <td class="idtd" style="width: 30%;">사용자id</td>
+                                    <td class="btntd" rowspan="2" style="width: 30%;"><input class="button2" type="button" value="팔로잉"></td>
+                                </tr>
+                                <tr>
+                                    <td>닉네임</td>
+                                </tr>
+                            </table>
+
                     </div>
                </div>
                 </div>
@@ -153,7 +176,22 @@
             }
         });
         
+
+        $(function(){
+            $('.button2').click( function() {
+                console.log('dd');
+            if( $(this).val() == '팔로잉' ) {
+                $(this).val('언팔로잉');
+            }
+            else {
+                $(this).val('팔로잉');
+            }
+        });
+        });
+
+ 
       </script>
+
 
       
 </body>
