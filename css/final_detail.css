@@ -293,7 +293,10 @@
     width: 515px;
     height: 44px;
     margin: 8px 2px;
+    padding-left: 20px;
 }
+
+input:focus {outline:none;}
 
 .comment-submit{
     width: 35px;

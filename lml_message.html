@@ -78,38 +78,29 @@
                 <div class="aTable">
                     <div class="aBox">
                         <div class="lContent">
-                            <div class="lmenu">
-                                <li style="text-align: center;">
-
-                                    <h2>message</h2>
-
-                                </li>
-                                <li class="minimenu">
-                                    <div class="profileimgdiv"><img
-                                        class="mainbtn"
-                                        src="./images/icon/message/KakaoTalk_20201023_135213749.png"></div>
-                                    <div class="messagemenu">
-                                        <h5>박아무개</h5>
-                                        <span>안녕?</span></div>
-                                </li>
-                                <li class="minimenu">
-                                    <div class="profileimgdiv"><img
-                                        class="mainbtn"
-                                        src="./images/icon/message/KakaoTalk_20201023_135213749_03.png"></div>
-                                    <div class="messagemenu">
-                                        <h5>이아무개</h5>
-                                        <span>오랜만?</span></div>
-                                </li>
-                                <li class="minimenu">
-                                    <div class="profileimgdiv"><img
-                                        class="mainbtn"
-                                        src="./images/icon/message/KakaoTalk_20201023_135213749_02.png"></div>
-                                    <div class="messagemenu">
-                                        <h5>유아무개</h5>
-                                        <span>자니..?</span>
+                            <div class="direct-div">Direct</div>
+                            <div class="direct-user-div">
+                                <div class="direct-user select-bar">
+                                    <img src="images/mainImg/pbuzz.jpg">
+                                    <div class="user-li">
+                                        <div class="li-userId">iambuzz</div>
+                                        <div class="li-direct">안녕</div>
                                     </div>
-                                </li>
-
+                                </div>
+                                <div class="direct-user">
+                                    <img src="images/mainImg/pandy.jpg">
+                                    <div class="user-li">
+                                        <div class="li-userId">chillyandy</div>
+                                        <div class="li-direct">아이스 애플민트티 먹어</div>
+                                    </div>
+                                </div>
+                                <div class="direct-user">
+                                    <img src="images/mainImg/pjessie.jpg">
+                                    <div class="user-li">
+                                        <div class="li-userId">jexxie</div>
+                                        <div class="li-direct">진진삼계탕 ㅋ</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -121,22 +112,16 @@
                                 <div class="user-id">iambuzz</div>
                             </div>
                             <div class="message">
-                                <div class="yourmessagediv">
-                                    <img src="./images/icon/message/KakaoTalk_20201023_135213749_01.png" class="yourmessageimg">    
+                                <div class="yourmessagediv">   
+                                    <img src="./images/mainImg/pbuzz.jpg" class="yourmessageimg">    
                                     <span class="yourmessage">안녕</span>
                                 </div>
-                              
                                 <div class="mymessagediv">    
                                     <span class="mymessage">안녕</span>
                                 </div>
-
                             </div>
-
-
-
                             <div class="send">
-                                <input type="text" class="inputsend" onKeyPress="if( event.keyCode==13 ){send();}">
-                                <button class="btnsend"><img class="btnsendimg" src="./images/icon/message/send-mail.png"></button>
+                                <input type="text" class="inputsend" placeholder="메세지 입력..." onKeyPress="if( event.keyCode==13 ){send();}">
                             </div>
 
                         </div>
@@ -172,11 +157,9 @@
 
         <script>
             $(document).ready(function () {
-                $('.minimenu').on('click', function () {
-                    $(this).addClass('put');
-                    $(this)
-                        .siblings()
-                        .removeClass('put');
+                $('.direct-user').on('click', function () {
+                    $(this).addClass('select-bar');
+                    $(this).siblings().removeClass('select-bar');
                 });
 
                 $('.message').scrollTop($('.message').prop('scrollHeight'));
@@ -185,7 +168,7 @@
             /* 채팅 */
             function send(){
                 if($('.inputsend').val()!=''){
-                $('.message').append('<div class="yourmessagediv"><img src="./images/icon/message/KakaoTalk_20201023_135213749_01.png" class="yourmessageimg">  <span class="yourmessage">안녕</span>');
+                $('.message').append('<div class="yourmessagediv"><img src="./images/mainImg/pbuzz.jpg" class="yourmessageimg"><span class="yourmessage">안녕</span></div>');
                 
                 
                 var mas = '<div class="mymessagediv"><span class="mymessage">' + $('.inputsend').val() + '</span></div>';
