@@ -252,7 +252,7 @@ input, textarea:focus {outline:none;}
     width: 619.8px;
     height: 55px;
     border: 1px solid rgb(216, 213, 213);
-    padding: 13px 0 0 100px;
+    padding: 13px 0 0 57px;
 }
 .fsearch{
     width: 400px;
@@ -294,4 +294,67 @@ input, textarea:focus {outline:none;}
     outline: none;
     transition: 0.3s;
 
+}
+.tags{
+	margin:0;
+	padding:0;
+	right:24px;
+	bottom:-12px;
+	list-style:none;
+    }
+.tags li, .tags a{
+    float: left;
+    height: 42px;
+    line-height: 28px;
+    position: relative;
+    font-size: 26px;
+        }
+.tags a{
+    margin-left: 20px;
+    padding: 4px 12px 7px 16px;
+    background: #0089e0;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+        } 
+.tags a:before{
+    content: "";
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 0px;
+    height: 42px;
+    border-color: transparent #0089e0 transparent transparent;
+    border-style: solid;
+    border-width: 21px 12px 20px 0px;
+            }
+ .tags a:after{
+                content:"";
+                position:absolute;
+                top: 18px;
+                left:0;
+                float:left;
+                width:4px;
+                height:4px;
+                -moz-border-radius:2px;
+                -webkit-border-radius:2px;
+                border-radius:2px;
+                background:#fff;
+                -moz-box-shadow:-1px -1px 2px #004977;
+                -webkit-box-shadow:-1px -1px 2px #004977;
+                box-shadow:-1px -1px 2px #004977;
+                }
+ .tags a:hover{background:#555;}	
+
+.tags a:hover:before{border-color:transparent #555 transparent transparent;}
+.change_address{
+    position: absolute;
+    margin-left: 650px;
+    margin-top:20px;
 }
