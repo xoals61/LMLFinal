@@ -226,6 +226,7 @@ input, textarea:focus {outline:none;}
 }
 
 .address{
+    font-size:20px;
     position: relative;
     width: 729.8px;
     height: 80%;
