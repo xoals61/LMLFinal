@@ -1,0 +1,196 @@
+section{
+    background-color: rgb(248, 248, 248);
+    height: 900px;
+}
+
+li {
+    list-style: none;
+    height: 80px;
+}
+.lContent {
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid rgb(216, 213, 213);
+}
+
+.rContent {
+    height: 100%;
+    width: 890px;
+}
+li.put {
+    background-color: rgba(27, 21, 21, 0.034);
+    border-left: 2px solid rgb(92, 160, 223);
+}
+
+.minimenu:hover {
+    background-color: rgba(27, 21, 21, 0.034);
+}
+.lmenu {
+    height: 500px;
+    width: 300px;
+}
+.mainbtn {
+    width: 100%;
+    height: 100%;
+}
+.aTable {
+    width: 1920px;
+    min-width: 1400px;
+    height: 100%;
+    padding: 120px 0 0 400px;
+}
+.aBox >div {
+    float: left;
+}
+.aBox {
+    width: 1200px;
+    height: 700px;
+    border: 1px solid rgb(216, 213, 213);
+    border-radius: 0.4em;
+    background-color: white;
+}
+.minimenu {
+    border-bottom: rgba(0, 0, 0, 0.199) 1px solid;
+    margin-top: 10px;
+}
+
+/* 왼쪽 메뉴 */
+.profileimgdiv {
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.messagemenu {
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    float: right;
+}
+
+
+/* 메세지 상대방 이름 */
+.message-user-div{
+    width: 899px;
+    float: left;
+    height: 10%;
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.user-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: left;
+    margin: 12px 0px 12px 30px;
+    background: gray;
+}
+
+.user-img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.user-id{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 16px;
+    float: left;
+}
+
+/* 메세지 내용 */
+
+.message {
+    width: 100%;
+    float: left;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.rContent ::-webkit-scrollbar {
+    width: 25px;
+}
+
+.rContent ::-webkit-scrollbar-thumb {
+    background-color: #a7a7a791;
+    border-radius: 50px;
+    background-clip: padding-box;
+    border: 9px solid transparent;
+}
+
+.rContent ::-webkit-scrollbar-track {
+    display: none;
+}
+
+.yourmessagediv{
+    float: left;
+    width: fit-content;
+    height: fit-content;
+    clear: both;
+    margin: 10px;
+}
+.yourmessage {
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 0 10px;
+
+}
+.yourmessageimg{
+    width: 40px;
+    border-radius: 30px;
+}
+.mymessagediv{
+    float: right;
+    width: fit-content;
+    height: fit-content;
+    clear: both;
+    margin: 10px;
+}
+.mymessage{
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+/* 메세지 보내는 부분 */
+.inputsend {
+    border: rgba(70, 131, 180, 0.37) 1px solid;
+    width: 750px;
+    height: 84%;
+    float: left;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+.btnsend {
+    width: 116px;
+    height: 85%;
+    float: right;
+    border: 0;
+    outline: 0;
+    background: none;
+    margin-top: 11px;
+    margin-right: 3px;
+}
+
+.send {
+    width: 100%;
+    border: solid 1px rgba(0, 0, 0, 0.274);
+    float: left;
+    height: 10%;
+    border-radius: 15px;
+}
+.btnsendimg {
+    width: 100%;
+    height: 100%;
+
+}
+
+
