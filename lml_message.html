@@ -47,12 +47,112 @@
             height: 100%;
             /* margin-right: 15px; */
         }
-        .aBox div {
+        .aTable {
+            width: 1920px;
+            min-width: 1400px;
+            height: 100%;
+            padding: 100px 0 0 400px;
+            border: 1px solid black;
+        }
+        .aBox >div {
             float: left;
+        }
+        .aBox {
+            width: 1200px;
+            height: 700px;
+            border: 1px solid rgb(216, 213, 213);
+            margin-right: 100px;
+            border-radius: 0.4em;
+            background-color: white;
         }
         .minimenu {
             border-bottom: rgba(0, 0, 0, 0.199) 1px solid;
             margin-top: 10px;
+        }
+      
+        .inputsend {
+            border: rgba(70, 131, 180, 0.37) 1px solid;
+            width: 750px;
+            height: 84%;
+            float: left;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+        .btnsend {
+            width: 116px;
+            height: 85%;
+            float: right;
+            border: 0;
+            outline: 0;
+            background: none;
+            margin-top: 11px;
+            margin-right: 3px;
+        }
+        .profileimgdiv {
+            width: 30%;
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+        }
+        .messagemenu {
+            width: 70%;
+            height: 100%;
+            box-sizing: border-box;
+            float: right;
+        }
+        .send {
+            width: 100%;
+            border: solid 1px rgba(0, 0, 0, 0.274);
+            float: left;
+            height: 20%;
+            border-radius: 15px;
+        }
+        .btnsendimg {
+            width: 100%;
+            height: 100%;
+
+        }
+        .message {
+            width: 100%;
+            float: left;
+            height: 80%;
+            overflow-y: scroll;
+
+        }
+        .yourmessagediv{
+            float: left;
+            width: fit-content;
+            height: fit-content;
+            clear: both;
+            margin: 10px;
+        }
+        .yourmessage {
+            font-size: 30px;
+            font-weight: bolder;
+            background-color: cornflowerblue;
+            border-radius: 5px;
+            padding: 0 10px;
+
+        }
+        .yourmessageimg{
+            width: 40px;
+            border-radius: 30px;
+        }
+        .mymessagediv{
+            float: right;
+            width: fit-content;
+            height: fit-content;
+            clear: both;
+            margin: 10px;
+        }
+        .mymessage{
+            font-size: 30px;
+            font-weight: bolder;
+            background-color: yellow;
+            border-radius: 5px;
+            padding: 0 10px;
         }
     </style>
     <body>
@@ -76,9 +176,19 @@
                                 <img src="./images/icon/menu/iconmonstr-menu-thin-72.png">
                                 <!-- 이미지 클릭 시 서브메뉴 나옴 -->
                                 <ul class="mySub">
-                                    <li><div class="mySub1">마이페이지</div></li>
-                                <a href="./lml_Settings.html"><li><div class="mySub1">설정</div></li></a>
-                                <a href="./lml_main_logout.html"><li><div class="mySub1">로그아웃</div></li></a>
+                                    <li>
+                                        <div class="mySub1">마이페이지</div>
+                                    </li>
+                                    <a href="./lml_Settings.html">
+                                        <li>
+                                            <div class="mySub1">설정</div>
+                                        </li>
+                                    </a>
+                                    <a href="./lml_main_logout.html">
+                                        <li>
+                                            <div class="mySub1">로그아웃</div>
+                                        </li>
+                                    </a>
                                 </ul>
                             </div>
                             <!--메뉴-->
@@ -86,7 +196,10 @@
                                 src="./images/icon/menu/iconmonstr-heart-thin-72.png"
                                 class="heart heartIcon"></div>
                             <!--알림-->
-                            <div><a href="./lml_message.html"><img src="./images/icon/menu/iconmonstr-speech-bubble-thin-72.png"></a></div><!--채팅-->
+                            <div>
+                                <a href="./lml_message.html"><img src="./images/icon/menu/iconmonstr-speech-bubble-thin-72.png"></a>
+                            </div>
+                            <!--채팅-->
                             <!--채팅-->
                         </div>
                     </div>
@@ -110,40 +223,36 @@
         </header>
         <section>
             <div class="sContent" style="border: 1px solid;">
-                <div
-                    class="aTable"
-                    style="width: 1920px;min-width: 1400px;height: 100%;padding: 100px 0 0 400px; border:1px solid black;">
-                    <div
-                        class="aBox"
-                        style=" width: 1200px;height: 700px;border:1px solid rgb(216, 213, 213);margin-right: 100px;border-radius: 0.4em;background-color: white;">
+                <div class="aTable">
+                    <div class="aBox">
                         <div class="lContent">
                             <div class="lmenu">
                                 <li style="text-align: center; border-bottom: rgba(0, 0, 0, 0.199) 1px solid;">
-                                    
-                                        <h2>message</h2>
-                                        
+
+                                    <h2>message</h2>
+
                                 </li>
                                 <li class="minimenu">
-                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img
+                                    <div class="profileimgdiv"><img
                                         class="mainbtn"
                                         src="./images/icon/message/KakaoTalk_20201023_135213749.png"></div>
-                                    <div style="width: 70%;height: 100%;box-sizing: border-box; float: right;">
+                                    <div class="messagemenu">
                                         <h5>박아무개</h5>
                                         <span>안녕?</span></div>
                                 </li>
                                 <li class="minimenu">
-                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img
+                                    <div class="profileimgdiv"><img
                                         class="mainbtn"
                                         src="./images/icon/message/KakaoTalk_20201023_135213749_03.png"></div>
-                                    <div style="width: 70%;height: 100%;box-sizing: border-box; float: right;">
+                                    <div class="messagemenu">
                                         <h5>이아무개</h5>
                                         <span>오랜만?</span></div>
                                 </li>
                                 <li class="minimenu">
-                                    <div style="width: 30%;height: 100%;box-sizing: border-box; float: left;"><img
+                                    <div class="profileimgdiv"><img
                                         class="mainbtn"
                                         src="./images/icon/message/KakaoTalk_20201023_135213749_02.png"></div>
-                                    <div style="width: 70%;height: 100%;box-sizing: border-box; float: right;">
+                                    <div class="messagemenu">
                                         <h5>유아무개</h5>
                                         <span>자니..?</span></div>
                                 </li>
@@ -153,30 +262,25 @@
 
                         <div class="rContent">
 
-                            <div class="message" style="width: 100%;float: left;height: 80%;"></div>
-                            <div
-                                class="send"
-                                style="width: 100%;border: solid 1px rgba(0, 0, 0, 0.274);float: left; height: 20%;border-radius: 15px;">
-                                <input
-                                    type="text"
-                                    style="border: rgba(70, 131, 180, 0.37) 1px solid;
-                            width: 750px;
-                            height: 84%;
-                            float: left;
-                            border-radius: 5px;
-                            margin-top: 10px;
-                            margin-left: 10px;">
-                                <button
-                                    style="width: 116px;
-                            height: 85%;
-                            float: right;
-                            border: 0;
-                            outline: 0px;
-                            background: none;
-                            margin-top: 11px;
-                            margin-right: 3px;"><img
-                                    src="./images/icon/message/send-mail.png"
-                                    style="width: 100%; height: 100%;"></button>
+                            <div class="message">
+                                <div class="yourmessagediv">
+                                    <img src="./images/icon/message/KakaoTalk_20201023_135213749_01.png" class="yourmessageimg">    
+                                    <span class="yourmessage">안녕</span>
+                                
+                                </div>
+                              
+                                <div class="mymessagediv">    
+                                    <span class="mymessage">안녕</span>
+                                
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="send">
+                                <input type="text" class="inputsend" onKeyPress="if( event.keyCode==13 ){send();}">
+                                <button class="btnsend"><img class="btnsendimg" src="./images/icon/message/send-mail.png"></button>
                             </div>
 
                         </div>
@@ -195,6 +299,8 @@
                         .siblings()
                         .removeClass('put');
                 });
+
+                $('.message').scrollTop($('.message').prop('scrollHeight'));
             });
             /* 상단 메뉴 스크롤 */
             $(function () {
@@ -221,9 +327,7 @@
                         .removeClass('on');
                 });
             });
-        </script>
 
-        <script>
             /* 마이페이지 햄버거메뉴 */
             $(document).ready(function () {
                 $(".mySub").hide();
@@ -249,6 +353,20 @@
                     $('.heartIcon').attr('src', './images/icon/menu/iconmonstr-heart-thin-72.png');
                 }
             });
+
+            function send(){
+                if($('.inputsend').val()!=''){
+                $('.message').append('<div class="yourmessagediv"><img src="./images/icon/message/KakaoTalk_20201023_135213749_01.png" class="yourmessageimg">  <span class="yourmessage">안녕</span>');
+                
+                
+                var mas = '<div class="mymessagediv"><span class="mymessage">' + $('.inputsend').val() + '</span></div>';
+                $('.message').append(mas);
+                $('.inputsend').val('');
+                $('.message').scrollTop($('.message').prop('scrollHeight'));
+                }
+            };
+
+
         </script>
 
     </body>
