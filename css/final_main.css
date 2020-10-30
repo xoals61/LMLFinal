@@ -203,24 +203,3 @@
         .hMenu2:nth-child(4).on ~ span{ left: 138px; opacity: 1; }
 
 
-
-        /* 본문 */
-        .sContent {
-            height: 2000px;
-            background-color: rgb(248, 248, 248);
-        }
-
-        .ctable{
-            width: 1920px;
-            min-width: 1400px;
-            height: 100%;
-            padding: 170px 400px;
-        }
-
-        .content{
-            width: 350px;
-            height: 350px;
-            background-color: rgb(160, 160, 160);
-            margin: 12px;
-        }
-
