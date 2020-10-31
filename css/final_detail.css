@@ -10,6 +10,14 @@
     background-color: rgba(0, 0, 0, 0.781); /* Fallback color */
 }
 
+a{
+    color:#000;
+}
+
+a:hover{
+    color:#000;
+}
+
 
 .board-detail{
     width: 955px;

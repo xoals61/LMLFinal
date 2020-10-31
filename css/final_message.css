@@ -3,6 +3,14 @@ section{
     height: 900px;
 }
 
+a{
+    color:#000;
+}
+
+a:hover{
+    color:#000;
+}
+
 .aTable {
     width: 1920px;
     min-width: 1400px;
@@ -63,6 +71,7 @@ section{
 
 .select-bar{
     border-left: 1px solid rgb(92, 160, 223);
+    cursor: pointer;
 }
 
 .select-bar:hover{
