@@ -87,15 +87,20 @@
 
         /* 로그인 버튼 */
         .loginBtn{
-            width: 100px;
-            height: 30px;
-            background: rgb(156, 156, 156);
-            margin: 10px 0px;
-            border-radius: 12px 12px;
+            width: 120px;
+            height: 36px;
+            margin: 12px 0px;
+            padding-top: 4px;
+            border-radius: 25px 25px;
             text-align: center;
-            color: white;
+            color: rgba(94, 94, 94, 0.74);
             font-weight: 400;
         }
+
+        .loginBtn:hover{
+            color:  rgba(94, 94, 94, 0.842);
+            font-weight: 500;
+        }   
 
         /* 알림 채팅 마이페이지 */
 
