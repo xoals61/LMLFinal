@@ -7,9 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/final_main.css">
         <link rel="stylesheet" href="./css/final_message.css">
-        <link rel="stylesheet" href="./css/final_footer.css">
     </head>
     <body>
         <header>
@@ -179,58 +177,6 @@
             };
 
 
-
-            /* 상단 메뉴 스크롤 */
-            $(function () {
-                var lastScrollTop = 0,
-                    delta = 15;
-                $(window).scroll(function (event) {
-                    var st = $(this).scrollTop();
-                    if (Math.abs(lastScrollTop - st) <= delta) 
-                        return;
-                    if ((st > lastScrollTop) && (lastScrollTop > 0)) {
-                        $(".hMenu").css("top", "0px");
-                    } else {
-                        $(".hMenu").css("top", "60px");
-                    }
-                    lastScrollTop = st;
-                });
-            });
-
-            $(document).ready(function () {
-                $('.hMenu2').on('click', function () {
-                    $(this).addClass('on');
-                    $(this)
-                        .siblings()
-                        .removeClass('on');
-                });
-            });
-
-            /* 마이페이지 햄버거메뉴 */
-            $(document).ready(function () {
-                $(".mySub").hide();
-                $(".myMenu").click(function () {
-                    $("ul", this).slideToggle("fast");
-                });
-            });
-
-            $("body").click(function (e) {
-                if (!$(".myMenu").has(e.target).length) {
-                    $(".mySub").hide();
-                }
-            });
-
-            /* 알림 아이콘 클릭 시 아이콘 변경 */
-            $(".heart").click(function () {
-                $('.heartIcon').attr('src', './images/icon/menu/iconmonstr-favorite-3-72.png');
-            });
-
-            // 다른곳 클릭하면 하트 원래대로
-            $("body").click(function (e) {
-                if (!$(".heart").has(e.target).length) {
-                    $('.heartIcon').attr('src', './images/icon/menu/iconmonstr-heart-thin-72.png');
-                }
-            });
 
         </script>
 
