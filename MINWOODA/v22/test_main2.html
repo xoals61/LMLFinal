@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" multiple />
+    <div id="image_container"></div>
+    <script>
+        function setThumbnail(event) {
+            for (var image of event.target.files) {
+                var reader = new FileReader(); // 파일을 읽을 수 있는 File Reader 를 생성합니다
+                reader.onload = function (event) {
+                    var img = document.createElement("img");
+                    img.setAttribute("src", event.target.result);
+                    // var img2 = new Image();
+                    // img2.setAttribute("src", event.target.result);
+                    var canvas = document.createElement("canvas");  // HTML5 canvas 객체를 생성합니다
+                    var ctx = canvas.getContext("2d");// canvas에 변경된 크기의 이미지를 다시 그려줍니다.
+                    
+
+                    // 최대폭을 400 으로 정했다고 가정했을때
+                    // 최대폭을 넘어가는 경우 canvas 크기를 변경해 줍니다.
+                    var MAX_WIDTH = 400;
+                    var MAX_HEIGHT = 400;
+                    var width = img.width;
+                    var height = img.height;
+                    if (width > height) {
+                        if (width > MAX_WIDTH) {
+                            height *= MAX_WIDTH / width;
+                            width = MAX_WIDTH;
+                        }
+                    } else {
+                        if (height > MAX_HEIGHT) {
+                            width *= MAX_HEIGHT / height;
+                            height = MAX_HEIGHT;
+                        }
+                    }
+                    ctx.drawImage(img, width, height);  //캔버스에 업로드된 이미지를 그려줍니다
+                    canvas.width = width;
+                    canvas.height = height;
+
+                    var dataurl = canvas.toDataURL("image/png");
+                    
+                    // document.querySelector("div#image_container").appendChild(canvas);
+                    
+                    img.src = dataurl;
+                    // image2.onload = function(){
+                    //     copyContext.drawImage(image2,400,400);
+                    //}
+
+                    document.querySelector("div#image_container").appendChild(img);
+
+                    console.log("img : " + img);
+                    console.log("img.src : " + img.src);
+                    console.log("image : " + image);
+                    console.log("image.src : " + image.src);
+                    console.log("canvas : " + canvas);
+                    console.log("canvas.src : " + canvas.src);
+                    console.log("ctx : " + ctx);
+                    console.log("ctx.src : " + ctx.src);
+                    console.log("dataurl : " + dataurl);
+                    console.log("dataurl.src : " + dataurl.src);
+                };
+                reader.readAsDataURL(image);
+            }
+        }
+    </script>
+</body>
+</html>
