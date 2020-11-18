@@ -16,7 +16,7 @@
     <header>
         <div class="hTitle">
             <div class="nav1">
-                <div class="hTitle1"><a href="./lml_main.html"><img src="./images/logo/logo_medium.png" class="titleImg"/></a></div>
+                <div class="hTitle1"><a href="./lml_main.html"><img src="./resources/images/logo/logo_medium.png" class="titleImg"/></a></div>
                 <div class="hTitle1">
                     <form action="#" autocomplete="off">
                         <fieldset class="sUrl">
@@ -28,7 +28,7 @@
                 <div class="hTitle1">
                     <div class="htMenu">
                         <div class="myMenu">
-                            <img src="./images/icon/menu/iconmonstr-menu-thin-72.png"><!-- 이미지 클릭 시 서브메뉴 나옴 -->
+                            <img src="./resources/images/icon/menu/iconmonstr-menu-thin-72.png"><!-- 이미지 클릭 시 서브메뉴 나옴 -->
                             <ul class="mySub">
                                 <a href="./JIMAN/MyPage.html"><li><div class="mySub1">마이페이지</div></li></a>
                                 <a href="./lml_Settings.html"><li><div class="mySub1">설정</div></li></a>
@@ -226,11 +226,11 @@
             <div class="upBtn">
                 <img src="./images/icon/main/arrow.png">
             </div>
-            <a href="./lml_Post.html">
+            <!--a href="#"-->
                 <div class="postBtn">
                     <img src="images/icon/main/plus.png">
                 </div>
-            </a>
+            <!--/a-->
             <div class="choice">
                 <p class="pchoice">체형별 보기</p>
                 <div class="choice1">
@@ -492,6 +492,31 @@
                 </table>
             </div>
         </div>
+
+        <!-- ############################# plus모달창 #############################-->
+        <div class="modal2" id="modal2" style="display: none;"></div>
+        <div class="md_content" id="md_content" style="display: none;">
+            <span id="text">업로드</span>
+            <button class="xbutton">X</button>
+            <hr style="border: solid 0.5px rgb(211, 211, 211);">
+
+            <div class="post-style-div" onclick="postStyle();">
+                <div class="post-style-btn"></div>
+                <div class="post-style-p">스타일</div>
+            </div>
+
+            <div class="post-qna-div" onclick="postQna();">
+                <div class="post-qna-btn"></div>
+                <div class="post-qna-p">QnA</div>
+            </div>
+
+            <!-- <i id="stlye-btn" class="fas fa-camera"></i>
+            <i id="mypage-btn" class="far fa-address-card"></i>
+            <i id="QnA-btn" class="fas fa-question"></i> -->
+            <!-- <span class="modal_text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;스타일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QnA
+            </span> -->
+        </div>
     </section>
     <footer>
         <div class="footer">
@@ -705,19 +730,46 @@
         var modal = document.getElementById('myModal');
         var detail = document.getElementById('board-detail');
         var content = document.getElementById('conte');
+        
 
         $('.hover-detail-content, .con, .cComment').click(function(){
             $('.myModal').css('display','block');
             $('.board-detail').css('display','block');
         });
  
+        
+
+        var modal2 = document.getElementById('modal2');
+        var md_content = document.getElementById('md_content'); 
+        
+        $('.postBtn').click(function(){
+            $('.modal2').css('display','block');
+            $('.md_content').css('display','block');
+        });
+
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 detail.style.display = "none";
             }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+                md_content.style.display = "none";
+            }
         }
-        
+
+        $('.xbutton').click(function(){
+            modal2.style.display = "none";
+            md_content.style.display = "none";
+        });
+
+        function postStyle(){
+            location.href="./lml_post_style.html";
+        }
+
+        function postQna(){
+            location.href="./lml_post_qna.html";
+        }
       </script>
 
       

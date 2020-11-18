@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>lml_Post_Style</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/final_main.css">
+    <link rel="stylesheet" href="./css/final_post_style.css">
+</head>
+<body>
+    <header>
+        <div class="hTitle">
+            <div class="nav1">
+                <div class="hTitle1"><a href="./lml_main.html"><img src="./images/logo/logo_medium.png" class="titleImg"/></a></div>
+                <div class="hTitle1">
+                    <form action="#" autocomplete="off">
+                        <fieldset class="sUrl">
+                            <input class="searchInput" type="text" required placeholder=" 검색">
+                            <div class="sAfter"></div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="hTitle1">
+                    <div class="htMenu">
+                        <div class="myMenu">
+                            <img src="./images/icon/menu/iconmonstr-menu-thin-72.png"><!-- 이미지 클릭 시 서브메뉴 나옴 -->
+                            <ul class="mySub">
+                                <li><div class="mySub1">마이페이지</div></li>
+                                <a href="./lml_Settings.html"><li><div class="mySub1">설정</div></li></a>
+                                <a href="./lml_main_logout.html"><li><div class="mySub1">로그아웃</div></li></a>
+                            </ul>
+                        </div><!--메뉴-->
+                        <div class="heart"><img src="./images/icon/menu/iconmonstr-heart-thin-72.png" class="heart heartIcon"></div><!--알림-->
+                        <div><img src="./images/icon/menu/iconmonstr-speech-bubble-thin-72.png"></div><!--채팅-->
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="hMenu">
+            <div class="hMenu1">
+                <div class="hMenu2 on"><span>인기순</span></div>
+                <div class="hMenu2"><span>최신순</span></div>
+                <div class="hMenu2"><span>팔로잉</span></div>
+                <div class="hMenu2"><span>QnA</span></div>
+                <span></span>
+            </div>
+            
+        </div>
+    </header>
+    <section>
+        <div class="AContent">
+            <button type="submit" class="uploadBtn">업로드</button>
+            <div class="Atable">
+                <div class="Abox">
+                    <form>
+                        <div class="post-div">
+                            <div class="div-img">
+                                <div class="post-img">스타일 이미지</div>
+
+                                <div class="post-img-div">
+                                    <div class="img-upload1" >
+                                        <input type="file" id="uploadImg" name="uploadImg" onchange="changeValue(this,$('#img-preview'))"  accept="image/*" />
+                                        <img class="img-upload-icon" id="img-upload" src="images/post/imgPlusIcon.png" />
+                                    </div>
+                                    <div class="img-preview" id="img-preview"></div>
+                                </div>
+
+                            </div>
+                            <div class="div-cont">
+                                <div class="post-cont">설명</div>
+                                <div class="post-cont-div">
+                                    <div class="cont-write">
+                                        <textarea placeholder="내용을 입력해주세요"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div-tag">
+                                <div style="float:left;">
+                                    <div class="post-tag">스타일 태그</div>
+                                </div>
+                                
+                                <div class="post-tag-div">
+                                    <div class="tag-select">
+                                        <select name="styleTag" class="styleTag" id="clothes">
+                                            <option value="상의">상의</option>
+                                            <option value="하의">하의</option>
+                                            <option value="신발">신발</option>
+                                            <option value="acc">acc</option>
+                                            <option value="etc">etc</option>
+                                        </select>&nbsp;&nbsp;&nbsp;
+                                        <input type="text" class="styleTag tagBrand" id="brand" placeholder="직접 입력">
+                                        <select name="styleTag" class="styleTag tagBrand" onchange="document.getElementById('brand').value = this.options[this.selectedIndex].value">
+                                            <option value="0">-----</option>
+                                            <option value="나이키">나이키</option>
+                                            <option value="에이블린">에이블린</option>
+                                            <option value="에잇세컨즈">에잇세컨즈</option>
+                                            <option value="아디다스">아디다스</option>
+                                            <option value="자라">자라</option>
+                                        </select>&nbsp;&nbsp;&nbsp;
+                                        <button type="button" class="styleTagBtn" onclick="styleTagBtn();">추가</button>
+                                        <div class="tagArea">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function changeValue(html, $target) {
+            if (html.files && html.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $target.css('display', '');
+                    $target.append('<img src="' + e.target.result + '" class="preview"/>');
+                }
+                reader.readAsDataURL(html.files[0]);
+            }
+        }
+
+        /*iput태그 파일*/
+        $(function () {    
+            $('#img-upload').click(function (e) {
+                e.preventDefault();   
+                $('#uploadImg').click();
+            });
+        });
+
+        var idnum = 77701;
+
+        function styleTagBtn(){
+            var clothes = document.getElementById('clothes').value;
+            var brand = document.getElementById('brand').value;
+
+            if(brand.length > 0){
+                $('.tagArea').append('<div class="tag" id='+ idnum +'>'+
+                                        '<p class="clothes">'+ clothes +'</p>'+
+                                        '<p class="brand">'+ brand +'</p>'+
+                                        '<div class="deleteStyleTag"><img src="images/post/close.png"></div>'+
+                                    '</div>');
+                idnum++;
+            }else{
+                alert("옷 정보를 입력해주세요.");
+            }
+        }
+
+        $(document).on("click", ".deleteStyleTag", function (e) {
+            //var index = $(this).attr("id");
+            $(this).parent().remove();
+        });
+    </script>
+
+      <script>
+        /*선택 메뉴 고정*/
+        $(document).ready(function(){
+            $('.minimenu').on('click', function(){
+                $(this).addClass('put');
+                $(this).siblings().removeClass('put');
+            });
+        });    
+          
+          /* 상단 메뉴 스크롤 */
+          $(function () {
+            var lastScrollTop = 0,
+                delta = 15;
+            $(window).scroll(function (event) {
+                var st = $(this).scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $(".hMenu").css("top", "0px");
+                } else {
+                    $(".hMenu").css("top", "60px");
+                }
+                lastScrollTop = st;
+            });
+        });
+
+        $(document).ready(function(){
+            $('.hMenu2').on('click', function(){
+                $(this).addClass('on');
+                $(this).siblings().removeClass('on');
+            });
+        });
+      </script>
+
+      <script>
+        /* 마이페이지 햄버거메뉴 */
+        $(document).ready(function(){
+            $(".mySub").hide();
+            $(".myMenu").click(function(){
+                $("ul",this).slideToggle("fast");
+            });
+        });
+
+        $("body").click(function(e){
+            if(!$(".myMenu").has(e.target).length){
+                $(".mySub").hide();
+            }
+        });
+
+
+        /* 알림 아이콘 클릭 시 아이콘 변경 */
+        $(".heart").click(function(){
+            $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-favorite-3-72.png');
+        });
+
+        // 다른곳 클릭하면 하트 원래대로
+        $("body").click(function(e){
+            if(!$(".heart").has(e.target).length){
+                $('.heartIcon').attr('src','./images/icon/menu/iconmonstr-heart-thin-72.png');
+            }
+        });
+        
+      </script>
+
+      
+</body>
+</html>
